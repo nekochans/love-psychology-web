@@ -8,7 +8,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.css'",
-    "format": "eslint --fix --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint --fix 'src/**/*.css'"
+    "format": "eslint --fix --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint --fix 'src/**/*.css'",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +38,10 @@
     "typescript": "3.6.4"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
     "eslint-config-airbnb": "^18.0.1",
