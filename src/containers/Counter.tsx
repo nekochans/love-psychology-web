@@ -1,29 +1,28 @@
-import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
-
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment } from '../actions/counter';
-import Counter from '../components/Counter';
 import { CounterState } from '../reducers/counter';
+import CounterComponent from '../components/Counter';
 
-interface StateProps {
-  count: number;
-}
+const Counter: React.FC = () => {
+  const dispatch = useDispatch();
+  const count = useSelector<CounterState, number>(state => state.count);
 
-interface DispatchProps {
-  decrement: () => void;
-  increment: () => void;
-}
+  const handleDecrement = React.useCallback(() => {
+    dispatch(decrement());
+  }, [dispatch]);
 
-const mapStateToProps = (state: CounterState): StateProps => ({
-  count: state.count,
-});
+  const handleIncrement = React.useCallback(() => {
+    dispatch(increment());
+  }, [dispatch]);
 
-const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  decrement: () => dispatch(decrement()),
-  increment: () => dispatch(increment()),
-});
+  return (
+    <CounterComponent
+      count={count}
+      decrement={handleDecrement}
+      increment={handleIncrement}
+    />
+  );
+};
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Counter);
+export default Counter;
