@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import Counter from './components/Counter';
+import Counter from './containers/Counter';
 import Home from './components/Home';
 
 import './App.css';
@@ -22,5 +22,4 @@ const App: FC = () => {
     </div>
   );
 };
-
 export default App;

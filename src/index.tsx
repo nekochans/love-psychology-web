@@ -1,14 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
 import { BrowserRouter } from 'react-router-dom';
+
 import App from './App';
+import counterReducer, { initialState } from './reducers/counter';
 import * as serviceWorker from './serviceWorker';
 
+import './index.css';
+
+const store = createStore(counterReducer, initialState);
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root'),
 );
 
