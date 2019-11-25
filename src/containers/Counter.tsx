@@ -12,7 +12,7 @@ const Counter: React.FC = () => {
   }, [dispatch]);
 
   const handleIncrement = React.useCallback(() => {
-    dispatch(counterModule.actions.increment);
+    dispatch(counterModule.actions.increment());
   }, [dispatch]);
 
   return (
