@@ -3,6 +3,7 @@ import {
   configureStore,
   getDefaultMiddleware,
 } from '@reduxjs/toolkit';
+import logger from 'redux-logger';
 import counterModule from './modules/counterModule';
 
 const rootReducer = combineReducers({
@@ -11,6 +12,10 @@ const rootReducer = combineReducers({
 
 const setupStore = () => {
   const middlewareList = [...getDefaultMiddleware()];
+
+  if (process.env.NODE_ENV !== 'production') {
+    middlewareList.push(logger);
+  }
 
   return configureStore({
     reducer: rootReducer,
