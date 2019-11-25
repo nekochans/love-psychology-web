@@ -20,6 +20,7 @@ const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
     middleware: middlewareList,
+    devTools: process.env.NODE_ENV !== 'production',
   });
 };
 
