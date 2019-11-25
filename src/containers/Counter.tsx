@@ -1,19 +1,18 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment } from '../actions/counter';
-import { CounterState } from '../reducers/counter';
+import counterModule, { RootState } from '../redux/modules/counterModule';
 import CounterComponent from '../components/Counter';
 
 const Counter: React.FC = () => {
   const dispatch = useDispatch();
-  const count = useSelector<CounterState, number>(state => state.count);
+  const count = useSelector<RootState, number>(state => state.counter.count);
 
   const handleDecrement = React.useCallback(() => {
-    dispatch(decrement());
+    dispatch(counterModule.actions.decrement());
   }, [dispatch]);
 
   const handleIncrement = React.useCallback(() => {
-    dispatch(increment());
+    dispatch(counterModule.actions.increment);
   }, [dispatch]);
 
   return (
