@@ -19,9 +19,11 @@ const counterModule = createSlice({
     increment: (state: CounterState) => {
       return { ...state, count: state.count + 1 };
     },
+    incrementAsync: () => {},
     decrement: (state: CounterState) => {
       return { ...state, count: state.count - 1 };
     },
+    decrementAsync: () => {},
   },
 });
 

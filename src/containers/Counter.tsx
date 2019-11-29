@@ -11,15 +11,25 @@ const Counter: React.FC = () => {
     dispatch(counterModule.actions.decrement());
   }, [dispatch]);
 
+  const handleDecrementAsync = React.useCallback(() => {
+    dispatch(counterModule.actions.decrementAsync());
+  }, [dispatch]);
+
   const handleIncrement = React.useCallback(() => {
     dispatch(counterModule.actions.increment());
+  }, [dispatch]);
+
+  const handleIncrementAsync = React.useCallback(() => {
+    dispatch(counterModule.actions.incrementAsync());
   }, [dispatch]);
 
   return (
     <CounterComponent
       count={count}
       decrement={handleDecrement}
+      decrementAsync={handleDecrementAsync}
       increment={handleIncrement}
+      incrementAsync={handleIncrementAsync}
     />
   );
 };
