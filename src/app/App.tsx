@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import Counter from './containers/Counter';
-import Home from './components/Home';
+import Counter from '../features/counter/Counter';
+import Home from '../components/Home';
 
 import './App.css';
 
