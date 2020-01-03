@@ -1,16 +1,10 @@
-import {
-  combineReducers,
-  configureStore,
-  getDefaultMiddleware,
-} from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
-import counterModule from './modules/counterModule';
-import rootSaga from './middleware/rootSaga';
+import counterSaga from '../features/counter/counterSaga';
 
-const rootReducer = combineReducers({
-  counter: counterModule.reducer,
-});
+import rootReducer from './rootReducer';
+
 const sagaMiddleware = createSagaMiddleware();
 
 const setupStore = () => {
@@ -26,7 +20,7 @@ const setupStore = () => {
     devTools: process.env.NODE_ENV !== 'production',
   });
 
-  sagaMiddleware.run(rootSaga);
+  sagaMiddleware.run(counterSaga);
 
   return store;
 };
