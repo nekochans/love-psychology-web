@@ -7,8 +7,6 @@ import setupStore from './app/store';
 import App from './app/App';
 import * as serviceWorker from './serviceWorker';
 
-import './index.css';
-
 const store = setupStore();
 
 ReactDOM.render(
