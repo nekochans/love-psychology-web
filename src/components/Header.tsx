@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../theme';
 
 const Header: FC = () => {
-  return <Head>愛の三角形理論</Head>;
+  return <Head>愛の心理学</Head>;
 };
 export default Header;
 

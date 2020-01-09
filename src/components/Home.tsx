@@ -9,7 +9,7 @@ const Home: FC = () => {
     <Section>
       <Content>
         <Text>
-          <Tagline>スタンバーグの愛の三角理論</Tagline>
+          <Tagline>愛の三角理論</Tagline>
           <ThisCopy>愛の三角形理論についての解説を追加する。</ThisCopy>
           <ThisCopy>
             1行目。あああああああああああああああああああああああああああああああああああああああああああ。
@@ -110,6 +110,7 @@ const Tagline = styled.h2`
   font-size: 40px;
   margin-top: 16px;
   margin-bottom: 32px;
+  text-align: center;
 
   @media (max-width: ${MOBILE_BREAK}px) {
     font-size: 24px;
@@ -161,14 +162,13 @@ export const Elements = styled.div`
   padding: 30px 5% 30px;
   grid-template-columns: minmax(400, auto) minmax(400, auto) minmax(400, auto);
   grid-template-areas: 'one two three';
-
   grid-column-gap: 32px;
   grid-row-gap: 32px;
   justify-content: center;
   justify-items: stretch;
 
   > div {
-    min-width: 320px;
+    min-width: 280px;
     margin: 0;
     justify-content: space-between;
 
@@ -191,6 +191,7 @@ export const Element = styled.h3`
   font-weight: 600;
   color: ${theme.text.default};
   margin-bottom: 8px;
+  text-align: center;
 `;
 
 export const ElementDescription = styled.p`
