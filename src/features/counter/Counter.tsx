@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import './Counter.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../app/rootReducer';
 import counter from './counterSlice';
+import './Counter.css';
 
 export interface CounterProps {
   count?: number;
@@ -35,36 +36,26 @@ const Counter: FC<CounterProps> = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <header>
-        <h1>カウンター</h1>
-      </header>
+    <div className="container">
       <div>
         <div>
-          <h1>count</h1>
-          <h2>{count}</h2>
+          <h1>カウンター</h1>
+          <h2>count</h2>
+          <h3>{count}</h3>
         </div>
         <div>
-          <button
-            className="counter-button"
-            type="button"
-            onClick={decrementAsync}
-          >
+          <Button type="button" onClick={decrementAsync}>
             -1 async
-          </button>
-          <button className="counter-button" type="button" onClick={decrement}>
+          </Button>
+          <Button type="button" onClick={decrement}>
             -1
-          </button>
-          <button className="counter-button" type="button" onClick={increment}>
+          </Button>
+          <Button type="button" onClick={increment}>
             +1
-          </button>
-          <button
-            className="counter-button"
-            type="button"
-            onClick={incrementAsync}
-          >
+          </Button>
+          <Button type="button" onClick={incrementAsync}>
             -1 async
-          </button>
+          </Button>
         </div>
         <div>
           <Link to="/">HOME</Link>
@@ -73,5 +64,9 @@ const Counter: FC<CounterProps> = () => {
     </div>
   );
 };
+
+const Button = styled.button`
+  margin: 10px;
+`;
 
 export default Counter;
