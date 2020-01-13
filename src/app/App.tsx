@@ -7,6 +7,7 @@ import { theme } from '../theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Counter from '../features/counter/Counter';
+import Question from '../features/question/Question';
 import Home from '../components/Home';
 
 const App: FC = () => {
@@ -18,6 +19,9 @@ const App: FC = () => {
         <Switch>
           <Route path="/counter">
             <Counter />
+          </Route>
+          <Route path="/question">
+            <Question />
           </Route>
           <Route path="/">
             <Home />
