@@ -7,7 +7,7 @@ import { theme } from '../theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Counter from '../features/counter/Counter';
-import Question from '../features/question/Question';
+import Analysis from '../features/analysis/Analysis';
 import Home from '../components/Home';
 
 const App: FC = () => {
@@ -20,8 +20,8 @@ const App: FC = () => {
           <Route path="/counter">
             <Counter />
           </Route>
-          <Route path="/question">
-            <Question />
+          <Route path="/analysis">
+            <Analysis />
           </Route>
           <Route path="/">
             <Home />
