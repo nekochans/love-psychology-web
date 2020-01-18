@@ -5,7 +5,7 @@ import analysis from '../features/analysis/analysisSlice';
 
 const rootReducer = combineReducers({
   counter: counter.reducer,
-  question: analysis.reducer,
+  analysis: analysis.reducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

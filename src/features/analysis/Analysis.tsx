@@ -6,21 +6,40 @@ import { RootState } from '../../app/rootReducer';
 const Analysis: FC<{}> = () => {
   const dispatch = useDispatch();
 
-  const questionsState = useSelector<RootState, AnalysisState>(
-    state => state.question,
+  const analysisState = useSelector<RootState, AnalysisState>(
+    state => state.analysis,
   );
 
   useEffect(() => {
     dispatch(analysis.actions.fetchQuestions());
+    dispatch(analysis.actions.fetchAnswers());
   }, [dispatch]);
 
   return (
     <div>
       <h1>質問一覧を表示する</h1>
       <ul>
-        {questionsState.questions instanceof Array
-          ? questionsState.questions.map(question => (
-              <li key={question.id}>{question.text}</li>
+        {analysisState.questions instanceof Array
+          ? analysisState.questions.map(question => (
+              <li key={question.id}>
+                <p>{question.text}</p>
+                <fieldset>
+                  <ul>
+                    {analysisState.answers instanceof Array
+                      ? analysisState.answers.map(answer => (
+                          <li key={answer.value}>
+                            <input
+                              type="radio"
+                              name={question.id.toString()}
+                              value={answer.value}
+                            />
+                            <div>{answer.text}</div>
+                          </li>
+                        ))
+                      : ''}
+                  </ul>
+                </fieldset>
+              </li>
             ))
           : ''}
       </ul>
