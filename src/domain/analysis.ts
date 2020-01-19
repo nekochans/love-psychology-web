@@ -8,6 +8,11 @@ export interface Choice {
   text: string;
 }
 
+export interface Answer {
+  questionId: string;
+  choiceId: string;
+}
+
 export const fetchQuestions = (): Question[] => {
   return [
     {

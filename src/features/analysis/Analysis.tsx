@@ -1,7 +1,11 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useEffect, ChangeEvent } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import analysis, { AnalysisState } from './analysisSlice';
 import { RootState } from '../../app/rootReducer';
+import { Answer } from '../../domain/analysis';
+
+type InputEvent = ChangeEvent<HTMLInputElement>;
+type ChangeHandler = (e: InputEvent) => void;
 
 const Analysis: FC<{}> = () => {
   const dispatch = useDispatch();
@@ -14,6 +18,14 @@ const Analysis: FC<{}> = () => {
     dispatch(analysis.actions.fetchQuestions());
     dispatch(analysis.actions.fetchChoices());
   }, [dispatch]);
+
+  const onChanged: ChangeHandler = e => {
+    const answer: Answer = {
+      questionId: e.target.name,
+      choiceId: e.target.value,
+    };
+    dispatch(analysis.actions.updateAnswers(answer));
+  };
 
   return (
     <div>
@@ -32,6 +44,7 @@ const Analysis: FC<{}> = () => {
                               type="radio"
                               name={question.id.toString()}
                               value={choice.value}
+                              onChange={onChanged}
                             />
                             <div>{choice.text}</div>
                           </li>
