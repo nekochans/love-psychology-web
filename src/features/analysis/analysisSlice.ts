@@ -6,6 +6,7 @@ export type AnalysisState = {
   choices?: Choice[];
   answers: Answer[];
   perPage: number;
+  disableNextButton: boolean;
   isLoading: boolean;
   errorMessage: string;
 };
@@ -14,10 +15,16 @@ export const initialState: AnalysisState = {
   questions: [],
   answers: [],
   perPage: 5,
+  disableNextButton: true,
   isLoading: false,
   errorMessage: '',
 };
 
+export type AnswersPayload = {
+  answer: Answer;
+  start: number;
+  end: number;
+};
 const analysis = createSlice({
   name: 'analysis',
   initialState,
@@ -52,21 +59,39 @@ const analysis = createSlice({
     },
     updateAnswers: (
       state: AnalysisState,
-      userAnswer: PayloadAction<Answer>,
+      action: PayloadAction<AnswersPayload>,
     ) => {
       const answers: Answer[] = state.answers.map(answer => {
-        if (answer.questionId === userAnswer.payload.questionId) {
+        if (answer.questionId === action.payload.answer.questionId) {
           return {
             questionId: answer.questionId,
-            choiceId: userAnswer.payload.choiceId,
+            choiceId: action.payload.answer.choiceId,
           };
         }
 
         return { questionId: answer.questionId, choiceId: answer.choiceId };
       });
 
+      let disableNextButton = true;
+      const answeredList = answers
+        .slice(action.payload.start, action.payload.end)
+        .map(answer => answer.choiceId !== '');
+
+      if (answeredList.indexOf(false) === -1) {
+        disableNextButton = false;
+      }
+
       return Object.assign(state, {
         answers,
+        disableNextButton,
+      });
+    },
+    updateDisableNextButton: (
+      state: AnalysisState,
+      action: PayloadAction<boolean>,
+    ) => {
+      return Object.assign(state, {
+        disableNextButton: action.payload,
       });
     },
   },

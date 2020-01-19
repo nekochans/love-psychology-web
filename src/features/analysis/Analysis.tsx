@@ -1,9 +1,8 @@
 import React, { FC, useEffect, useState, ChangeEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import analysis, { AnalysisState } from './analysisSlice';
+import analysis, { AnalysisState, AnswersPayload } from './analysisSlice';
 import { RootState } from '../../app/rootReducer';
-import { Answer } from '../../domain/analysis';
 
 type InputEvent = ChangeEvent<HTMLInputElement>;
 type ChangeHandler = (e: InputEvent) => void;
@@ -11,9 +10,10 @@ type ChangeHandler = (e: InputEvent) => void;
 const Analysis: FC<{}> = () => {
   const dispatch = useDispatch();
 
-  const { questions, choices, perPage } = useSelector<RootState, AnalysisState>(
-    state => state.analysis,
-  );
+  const { questions, choices, perPage, disableNextButton } = useSelector<
+    RootState,
+    AnalysisState
+  >(state => state.analysis);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentSliceStart, setCurrentSliceStart] = useState(0);
   const [currentSliceEnd, setCurrentSliceEnd] = useState(perPage);
@@ -26,17 +26,24 @@ const Analysis: FC<{}> = () => {
   }, [dispatch]);
 
   const onChanged: ChangeHandler = e => {
-    const answer: Answer = {
-      questionId: e.target.name,
-      choiceId: e.target.value,
+    const payload: AnswersPayload = {
+      answer: {
+        questionId: e.target.name,
+        choiceId: e.target.value,
+      },
+      start: currentSliceStart,
+      end: currentSliceEnd,
     };
-    dispatch(analysis.actions.updateAnswers(answer));
+
+    dispatch(analysis.actions.updateAnswers(payload));
   };
 
   const onClick = () => {
     setCurrentSliceStart(currentPage * perPage);
     setCurrentSliceEnd((currentPage + 1) * perPage);
     setCurrentPage(currentPage + 1);
+
+    dispatch(analysis.actions.updateDisableNextButton(true));
   };
 
   return (
@@ -69,9 +76,14 @@ const Analysis: FC<{}> = () => {
         ))}
       </ul>
       {currentPage === pageCount ? (
-        <Link to="/result">診断結果</Link>
+        <Link
+          to="/result"
+          style={{ pointerEvents: disableNextButton ? 'none' : 'auto' }}
+        >
+          診断結果へ
+        </Link>
       ) : (
-        <button type="submit" onClick={onClick}>
+        <button type="submit" disabled={disableNextButton} onClick={onClick}>
           次へ
         </button>
       )}
