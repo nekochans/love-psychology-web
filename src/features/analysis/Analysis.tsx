@@ -12,7 +12,7 @@ const Analysis: FC<{}> = () => {
 
   useEffect(() => {
     dispatch(analysis.actions.fetchQuestions());
-    dispatch(analysis.actions.fetchAnswers());
+    dispatch(analysis.actions.fetchChoices());
   }, [dispatch]);
 
   return (
@@ -25,15 +25,15 @@ const Analysis: FC<{}> = () => {
                 <p>{question.text}</p>
                 <fieldset>
                   <ul>
-                    {analysisState.answers instanceof Array
-                      ? analysisState.answers.map(answer => (
-                          <li key={answer.value}>
+                    {analysisState.choices instanceof Array
+                      ? analysisState.choices.map(choice => (
+                          <li key={choice.value}>
                             <input
                               type="radio"
                               name={question.id.toString()}
-                              value={answer.value}
+                              value={choice.value}
                             />
-                            <div>{answer.text}</div>
+                            <div>{choice.text}</div>
                           </li>
                         ))
                       : ''}

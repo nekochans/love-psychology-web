@@ -3,7 +3,7 @@ export interface Question {
   text: string;
 }
 
-export interface Answer {
+export interface Choice {
   value: string;
   text: string;
 }
@@ -74,7 +74,7 @@ export const fetchQuestions = (): Question[] => {
   ];
 };
 
-export const fetchAnswers = (): Answer[] => {
+export const fetchChoices = (): Choice[] => {
   return [
     { value: '1', text: 'とても当てはまる' },
     { value: '2', text: '' },

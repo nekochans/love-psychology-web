@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Answer, Question } from '../../domain/analysis';
+import { Choice, Question } from '../../domain/analysis';
 
 export type AnalysisState = {
   questions?: Question[];
-  answers?: Answer[];
+  choices?: Choice[];
   isLoading: boolean;
   errorMessage: string;
 };
@@ -28,13 +28,13 @@ const analysis = createSlice({
         errorMessage: '',
       });
     },
-    fetchAnswers: () => {},
-    fetchAnswersSuccess: (
+    fetchChoices: () => {},
+    fetchChoicesSuccess: (
       state: AnalysisState,
-      action: PayloadAction<Answer[]>,
+      action: PayloadAction<Choice[]>,
     ) => {
       return Object.assign(state, {
-        answers: action.payload,
+        choices: action.payload,
         isLoading: false,
         errorMessage: '',
       });
