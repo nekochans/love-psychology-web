@@ -2,15 +2,18 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Answer, Choice, Question } from '../../domain/analysis';
 
 export type AnalysisState = {
-  questions?: Question[];
+  questions: Question[];
   choices?: Choice[];
   answers: Answer[];
+  perPage: number;
   isLoading: boolean;
   errorMessage: string;
 };
 
 export const initialState: AnalysisState = {
+  questions: [],
   answers: [],
+  perPage: 5,
   isLoading: false,
   errorMessage: '',
 };
@@ -28,6 +31,7 @@ const analysis = createSlice({
         return { questionId: question.id.toString(), choiceId: '' };
       });
 
+      // TODO 質問の総数がperPageの場合の考慮
       return Object.assign(state, {
         questions: action.payload,
         answers,
