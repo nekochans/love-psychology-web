@@ -54,8 +54,12 @@ const Home: FC = () => {
           </ElementSection>
         </Elements>
       </Content>
-      <TestLink to="/counter">
+      <TestLink to="/analysis">
         <span>診断する！</span>
+      </TestLink>
+
+      <TestLink to="/counter">
+        <span>Counter</span>
       </TestLink>
     </Section>
   );

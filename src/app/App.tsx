@@ -8,6 +8,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Counter from '../features/counter/Counter';
 import Home from '../components/Home';
+import Analysis from '../features/analysis/Analysis';
+import Result from '../features/result/Result';
 
 const App: FC = () => {
   return (
@@ -18,6 +20,12 @@ const App: FC = () => {
         <Switch>
           <Route path="/counter">
             <Counter />
+          </Route>
+          <Route path="/analysis">
+            <Analysis />
+          </Route>
+          <Route path="/result">
+            <Result />
           </Route>
           <Route path="/">
             <Home />
