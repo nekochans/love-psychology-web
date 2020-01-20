@@ -14,6 +14,7 @@ const Analysis: FC<{}> = () => {
     RootState,
     AnalysisState
   >(state => state.analysis);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [currentSliceStart, setCurrentSliceStart] = useState(0);
   const [currentSliceEnd, setCurrentSliceEnd] = useState(perPage);
