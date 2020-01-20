@@ -38,24 +38,26 @@ const analysis = createSlice({
         return { questionId: question.id.toString(), choiceId: '' };
       });
 
-      // TODO 質問の総数がperPageの場合の考慮
-      return Object.assign(state, {
+      // TODO 質問の総数がperPage以下の場合の考慮
+      return {
+        ...state,
         questions: action.payload,
         answers,
         isLoading: false,
         errorMessage: '',
-      });
+      };
     },
     fetchChoices: () => {},
     fetchChoicesSuccess: (
       state: AnalysisState,
       action: PayloadAction<Choice[]>,
     ) => {
-      return Object.assign(state, {
+      return {
+        ...state,
         choices: action.payload,
         isLoading: false,
         errorMessage: '',
-      });
+      };
     },
     updateAnswers: (
       state: AnalysisState,
@@ -72,27 +74,22 @@ const analysis = createSlice({
         return { questionId: answer.questionId, choiceId: answer.choiceId };
       });
 
-      let disableNextButton = true;
       const answeredList = answers
         .slice(action.payload.start, action.payload.end)
         .map(answer => answer.choiceId !== '');
 
-      if (answeredList.indexOf(false) === -1) {
-        disableNextButton = false;
-      }
+      const disableNextButton = answeredList.indexOf(false) !== -1;
 
-      return Object.assign(state, {
-        answers,
-        disableNextButton,
-      });
+      return { ...state, answers, disableNextButton };
     },
     updateDisableNextButton: (
       state: AnalysisState,
       action: PayloadAction<boolean>,
     ) => {
-      return Object.assign(state, {
+      return {
+        ...state,
         disableNextButton: action.payload,
-      });
+      };
     },
   },
 });
