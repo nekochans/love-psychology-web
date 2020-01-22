@@ -57,10 +57,6 @@ const Home: FC = () => {
       <TestLink to="/analysis">
         <span>診断する！</span>
       </TestLink>
-
-      <TestLink to="/counter">
-        <span>Counter</span>
-      </TestLink>
     </Section>
   );
 };
@@ -71,21 +67,14 @@ const Section = styled.div`
   background-color: ${theme.bg.default};
   color: ${theme.text.default};
   display: flex;
-  flex: 1 0 auto;
   flex-direction: column;
-  position: relative;
   justify-content: center;
 `;
 
 const Content = styled.div`
-  flex-direction: column;
-  display: flex;
-  flex: auto;
-  align-self: stretch;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Text = styled.div`
