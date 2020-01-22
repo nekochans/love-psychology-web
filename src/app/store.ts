@@ -1,7 +1,6 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
-import counterSaga from '../features/counter/counterSaga';
 import analysisSaga from '../features/analysis/analysisSaga';
 
 import rootReducer from './rootReducer';
@@ -21,7 +20,6 @@ const setupStore = () => {
     devTools: process.env.NODE_ENV !== 'production',
   });
 
-  sagaMiddleware.run(counterSaga);
   sagaMiddleware.run(analysisSaga);
 
   return store;
