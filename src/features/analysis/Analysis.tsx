@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState, ChangeEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { Element, scroller, animateScroll as scroll } from 'react-scroll';
 
 import analysis, { AnalysisState, AnswersPayload } from './analysisSlice';
 import { RootState } from '../../app/rootReducer';
@@ -41,6 +42,14 @@ const Analysis: FC<{}> = () => {
     };
 
     dispatch(analysis.actions.updateAnswers(payload));
+
+    const scrollTo = parseInt(e.target.name, 10) + 1;
+    scroller.scrollTo(scrollTo.toString(), {
+      duration: 350,
+      delay: 100,
+      smooth: true,
+      offset: -120,
+    });
   };
 
   const onClick = () => {
@@ -49,34 +58,41 @@ const Analysis: FC<{}> = () => {
     setCurrentPage(currentPage + 1);
 
     dispatch(analysis.actions.updateDisableNextButton(true));
+
+    scroll.scrollToTop({
+      duration: 0,
+    });
   };
 
   return (
     <Section>
       <h1>質問一覧を表示する</h1>
+
       <QuestionList>
         {questions.slice(currentSliceStart, currentSliceEnd).map(question => (
           <li key={question.id}>
-            <p>
-              {question.id}. {question.text}
-            </p>
-            <ChoiceFieldset>
-              <ChoiceList>
-                {choices instanceof Array
-                  ? choices.map(choice => (
-                      <ChoiceListItem key={choice.value}>
-                        <Radio
-                          type="radio"
-                          name={question.id.toString()}
-                          value={choice.value}
-                          onChange={onChanged}
-                        />
-                        <div>{choice.text}</div>
-                      </ChoiceListItem>
-                    ))
-                  : ''}
-              </ChoiceList>
-            </ChoiceFieldset>
+            <Element name={question.id.toString()}>
+              <p>
+                {question.id}. {question.text}
+              </p>
+              <ChoiceFieldset>
+                <ChoiceList>
+                  {choices instanceof Array
+                    ? choices.map(choice => (
+                        <ChoiceListItem key={choice.value}>
+                          <Radio
+                            type="radio"
+                            name={question.id.toString()}
+                            value={choice.value}
+                            onChange={onChanged}
+                          />
+                          <div>{choice.text}</div>
+                        </ChoiceListItem>
+                      ))
+                    : ''}
+                </ChoiceList>
+              </ChoiceFieldset>
+            </Element>
           </li>
         ))}
       </QuestionList>
