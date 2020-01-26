@@ -1,8 +1,12 @@
 import React, { FC, useEffect, useState, ChangeEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+
 import analysis, { AnalysisState, AnswersPayload } from './analysisSlice';
 import { RootState } from '../../app/rootReducer';
+import { theme } from '../../theme';
+import { MOBILE_BREAK } from '../../theme/layout';
 
 type InputEvent = ChangeEvent<HTMLInputElement>;
 type ChangeHandler = (e: InputEvent) => void;
@@ -48,34 +52,34 @@ const Analysis: FC<{}> = () => {
   };
 
   return (
-    <div>
+    <Section>
       <h1>質問一覧を表示する</h1>
-      <ul>
+      <QuestionList>
         {questions.slice(currentSliceStart, currentSliceEnd).map(question => (
           <li key={question.id}>
             <p>
               {question.id}. {question.text}
             </p>
-            <fieldset>
-              <ul>
+            <ChoiceFieldset>
+              <ChoiceList>
                 {choices instanceof Array
                   ? choices.map(choice => (
-                      <li key={choice.value}>
-                        <input
+                      <ChoiceListItem key={choice.value}>
+                        <Radio
                           type="radio"
                           name={question.id.toString()}
                           value={choice.value}
                           onChange={onChanged}
                         />
                         <div>{choice.text}</div>
-                      </li>
+                      </ChoiceListItem>
                     ))
                   : ''}
-              </ul>
-            </fieldset>
+              </ChoiceList>
+            </ChoiceFieldset>
           </li>
         ))}
-      </ul>
+      </QuestionList>
       {currentPage === pageCount ? (
         <Link
           to="/result"
@@ -88,8 +92,53 @@ const Analysis: FC<{}> = () => {
           次へ
         </button>
       )}
-    </div>
+    </Section>
   );
 };
+
+const Section = styled.div`
+  align-items: center;
+  justify-content: center;
+  background-color: ${theme.bg.default};
+  color: ${theme.text.default};
+  display: flex;
+  flex-direction: column;
+`;
+
+export const QuestionList = styled.ul`
+  list-style-type: none;
+  padding: 0 10px;
+`;
+
+export const ChoiceFieldset = styled.fieldset`
+  border: 0;
+`;
+
+export const ChoiceList = styled.ul`
+  list-style-type: none;
+  display: flex;
+  margin: 0 -16px 16px;
+  padding: 0 6px;
+  flex: 1;
+`;
+
+export const ChoiceListItem = styled.li`
+  position: relative;
+  top: 1px;
+  color: ${theme.text.alt}
+  font-weight: 400;
+  padding: 10px;
+  font-size: 13px;
+
+  &:hover {
+    color: ${theme.text.default};
+  }
+
+  @media (max-width: ${MOBILE_BREAK}px) {
+    font-size: 10px;
+  }
+`;
+
+const Radio = styled.input``;
 
 export default Analysis;
