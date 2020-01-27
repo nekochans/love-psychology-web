@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { Element, scroller, animateScroll as scroll } from 'react-scroll';
-
 import analysis, { AnalysisState, AnswersPayload } from './analysisSlice';
 import { RootState } from '../../app/rootReducer';
 import { theme } from '../../theme';
-import { MOBILE_BREAK } from '../../theme/layout';
 
 type InputEvent = ChangeEvent<HTMLInputElement>;
 type ChangeHandler = (e: InputEvent) => void;
@@ -15,10 +13,13 @@ type ChangeHandler = (e: InputEvent) => void;
 const Analysis: FC<{}> = () => {
   const dispatch = useDispatch();
 
-  const { questions, choices, perPage, disableNextButton } = useSelector<
-    RootState,
-    AnalysisState
-  >(state => state.analysis);
+  const {
+    questions,
+    choices,
+    perPage,
+    disableNextButton,
+    answers,
+  } = useSelector<RootState, AnalysisState>(state => state.analysis);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [currentSliceStart, setCurrentSliceStart] = useState(0);
@@ -48,7 +49,7 @@ const Analysis: FC<{}> = () => {
       duration: 350,
       delay: 100,
       smooth: true,
-      offset: -120,
+      offset: -140,
     });
   };
 
@@ -66,34 +67,41 @@ const Analysis: FC<{}> = () => {
 
   return (
     <Section>
-      <h1>質問一覧を表示する</h1>
-
+      <Description>
+        恋人や片思いの人を思い浮かべながら回答しましょう。
+      </Description>
       <QuestionList>
         {questions.slice(currentSliceStart, currentSliceEnd).map(question => (
-          <li key={question.id}>
+          <QuestionListItem key={question.id}>
             <Element name={question.id.toString()}>
-              <p>
-                {question.id}. {question.text}
-              </p>
+              <QuestionTitle>
+                Q{question.id}. {question.text}
+              </QuestionTitle>
               <ChoiceFieldset>
                 <ChoiceList>
                   {choices instanceof Array
                     ? choices.map(choice => (
                         <ChoiceListItem key={choice.value}>
-                          <Radio
-                            type="radio"
-                            name={question.id.toString()}
-                            value={choice.value}
-                            onChange={onChanged}
-                          />
-                          <div>{choice.text}</div>
+                          <RadioIcon
+                            checked={
+                              choice.value === answers[question.id - 1].choiceId
+                            }
+                          >
+                            <HiddenRadio
+                              type="radio"
+                              name={question.id.toString()}
+                              value={choice.value}
+                              onChange={onChanged}
+                            />
+                          </RadioIcon>
+                          <RadioText>{choice.text}</RadioText>
                         </ChoiceListItem>
                       ))
                     : ''}
                 </ChoiceList>
               </ChoiceFieldset>
             </Element>
-          </li>
+          </QuestionListItem>
         ))}
       </QuestionList>
       {currentPage === pageCount ? (
@@ -105,12 +113,16 @@ const Analysis: FC<{}> = () => {
         </Link>
       ) : (
         <button type="submit" disabled={disableNextButton} onClick={onClick}>
-          次へ
+          次へ進む
         </button>
       )}
     </Section>
   );
 };
+
+interface RadioIconProps {
+  checked: boolean;
+}
 
 const Section = styled.div`
   align-items: center;
@@ -121,9 +133,25 @@ const Section = styled.div`
   flex-direction: column;
 `;
 
+const Description = styled.p`
+  color: ${theme.text.alt};
+  font-size: 14px;
+  margin: 4em auto 1em;
+`;
+
+const QuestionTitle = styled.p`
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+`;
+
 export const QuestionList = styled.ul`
   list-style-type: none;
   padding: 0 10px;
+`;
+
+export const QuestionListItem = styled.li`
+  margin-bottom: 60px;
 `;
 
 export const ChoiceFieldset = styled.fieldset`
@@ -132,29 +160,66 @@ export const ChoiceFieldset = styled.fieldset`
 
 export const ChoiceList = styled.ul`
   list-style-type: none;
-  display: flex;
-  margin: 0 -16px 16px;
+  display: table;
+  max-width: 375px;
+  margin: 0 auto;
   padding: 0 6px;
-  flex: 1;
+  width: 100%;
 `;
 
 export const ChoiceListItem = styled.li`
-  position: relative;
-  top: 1px;
-  color: ${theme.text.alt}
-  font-weight: 400;
-  padding: 10px;
-  font-size: 13px;
+  display: table-cell;
+`;
 
-  &:hover {
-    color: ${theme.text.default};
+const RadioIcon = styled.label<RadioIconProps>`
+  position: relative;
+  display: block;
+  width: 16vw;
+  height: 16vw;
+  max-width: 58px;
+  max-height: 58px;
+  margin: 0 auto 7px;
+  padding: 0;
+  border-radius: 100%;
+  background-color: ${props =>
+    props.checked ? theme.radio.dark : theme.radio.secondary};
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: center;
+  transition: 0.2s;
+
+  &:after {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 26px;
+    height: 26px;
+    margin: auto;
+    border-radius: 100%;
+    background-color: ${theme.bg.default};
+    content: '';
   }
 
-  @media (max-width: ${MOBILE_BREAK}px) {
-    font-size: 10px;
+  &:hover {
+    opacity: 0.8;
   }
 `;
 
-const Radio = styled.input``;
+const RadioText = styled.div`
+  width: 58px;
+  margin: 0 auto;
+  line-height: 1.3;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  color: ${theme.text.alt};
+`;
+
+const HiddenRadio = styled.input`
+  display: none;
+`;
 
 export default Analysis;

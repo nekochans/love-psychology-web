@@ -18,6 +18,10 @@ const theme: DefaultTheme = {
     alt: '#67717A',
     reverse: '#FFFFFF',
   },
+  radio: {
+    dark: '#888888',
+    secondary: '#eeeeee',
+  },
 };
 
 export { theme };

@@ -19,5 +19,9 @@ declare module 'styled-components' {
       alt: string;
       reverse: string;
     };
+    radio: {
+      dark: string;
+      secondary: string;
+    };
   }
 }
