@@ -12,6 +12,7 @@ declare module 'styled-components' {
       pink: string;
       darkpink: string;
       purple: string;
+      disabled: string;
     };
     text: {
       default: string;

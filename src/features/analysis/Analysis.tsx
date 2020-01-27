@@ -105,24 +105,37 @@ const Analysis: FC<{}> = () => {
         ))}
       </QuestionList>
       {currentPage === pageCount ? (
-        <Link
+        <ResultLink
           to="/result"
+          disabled={disableNextButton}
           style={{ pointerEvents: disableNextButton ? 'none' : 'auto' }}
         >
           診断結果へ
-        </Link>
+        </ResultLink>
       ) : (
-        <button type="submit" disabled={disableNextButton} onClick={onClick}>
+        <NextButton
+          type="submit"
+          disabled={disableNextButton}
+          onClick={onClick}
+        >
           次へ進む
-        </button>
+        </NextButton>
       )}
     </Section>
   );
 };
 
-interface RadioIconProps {
+type RadioIconProps = {
   checked: boolean;
-}
+};
+
+type NextButtonProps = {
+  disabled: boolean;
+};
+
+type ResultLinkProps = {
+  disabled: boolean;
+};
 
 const Section = styled.div`
   align-items: center;
@@ -148,10 +161,13 @@ const QuestionTitle = styled.p`
 export const QuestionList = styled.ul`
   list-style-type: none;
   padding: 0 10px;
+  margin: 30px 0 30px;
 `;
 
 export const QuestionListItem = styled.li`
-  margin-bottom: 60px;
+  :not(:last-child) {
+    margin-bottom: 60px;
+  }
 `;
 
 export const ChoiceFieldset = styled.fieldset`
@@ -220,6 +236,33 @@ const RadioText = styled.div`
 
 const HiddenRadio = styled.input`
   display: none;
+`;
+
+export const NextButton = styled.button<NextButtonProps>`
+  background-color: ${props =>
+    props.disabled ? theme.colors.disabled : theme.colors.pink};
+  border: none;
+  color: ${theme.text.reverse};
+  align-items: center;
+  border-radius: 8px;
+  margin: 24px 0 24px;
+  padding: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+`;
+
+export const ResultLink = styled(Link)<ResultLinkProps>`
+  background-color: ${props =>
+    props.disabled ? theme.colors.disabled : theme.colors.pink};
+  color: ${theme.text.reverse};
+  align-items: center;
+  border-radius: 8px;
+  margin: 24px 0 24px;
+  padding: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
 `;
 
 export default Analysis;

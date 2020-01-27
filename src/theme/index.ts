@@ -11,6 +11,7 @@ const theme: DefaultTheme = {
     pink: '#f67280',
     darkpink: '#c06c84',
     purple: '#6c567b',
+    disabled: '#eeeeee',
   },
   text: {
     default: '#24292E',

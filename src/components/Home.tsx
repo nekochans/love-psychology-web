@@ -54,9 +54,9 @@ const Home: FC = () => {
           </ElementSection>
         </Elements>
       </Content>
-      <TestLink to="/analysis">
+      <AnalysisLink to="/analysis">
         <span>診断する！</span>
-      </TestLink>
+      </AnalysisLink>
     </Section>
   );
 };
@@ -195,7 +195,7 @@ export const ElementDescription = styled.p`
 `;
 
 // 診断ページへのリンク
-export const TestLink = styled(Link)`
+export const AnalysisLink = styled(Link)`
   background-color: ${theme.colors.pink};
   color: ${theme.text.reverse};
   align-items: center;
@@ -204,6 +204,7 @@ export const TestLink = styled(Link)`
   padding: 16px;
   font-weight: 700;
   text-decoration: none;
+  font-size: 16px;
 `;
 
 export default Home;
