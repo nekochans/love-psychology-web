@@ -139,11 +139,11 @@ type ResultLinkProps = {
 
 const Section = styled.div`
   align-items: center;
-  justify-content: center;
   background-color: ${theme.bg.default};
   color: ${theme.text.default};
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 const Description = styled.p`
@@ -160,8 +160,8 @@ const QuestionTitle = styled.p`
 
 export const QuestionList = styled.ul`
   list-style-type: none;
-  padding: 0 10px;
   margin: 30px 0 30px;
+  padding: 0 10px;
 `;
 
 export const QuestionListItem = styled.li`
@@ -175,10 +175,10 @@ export const ChoiceFieldset = styled.fieldset`
 `;
 
 export const ChoiceList = styled.ul`
-  list-style-type: none;
   display: table;
-  max-width: 375px;
+  list-style-type: none;
   margin: 0 auto;
+  max-width: 375px;
   padding: 0 6px;
   width: 100%;
 `;
@@ -188,35 +188,35 @@ export const ChoiceListItem = styled.li`
 `;
 
 const RadioIcon = styled.label<RadioIconProps>`
-  position: relative;
-  display: block;
-  width: 16vw;
-  height: 16vw;
-  max-width: 58px;
-  max-height: 58px;
-  margin: 0 auto 7px;
-  padding: 0;
-  border-radius: 100%;
   background-color: ${props =>
     props.checked ? theme.radio.dark : theme.radio.secondary};
+  border-radius: 100%;
   cursor: pointer;
+  display: block;
   font-size: inherit;
   font-weight: inherit;
+  height: 16vw;
+  margin: 0 auto 7px;
+  max-height: 58px;
+  max-width: 58px;
+  padding: 0;
+  position: relative;
   text-align: center;
   transition: 0.2s;
+  width: 16vw;
 
-  &:after {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    width: 26px;
-    height: 26px;
-    margin: auto;
-    border-radius: 100%;
+  &::after {
     background-color: ${theme.bg.default};
+    border-radius: 100%;
+    bottom: 0;
     content: '';
+    height: 26px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 26px;
   }
 
   &:hover {
@@ -225,13 +225,13 @@ const RadioIcon = styled.label<RadioIconProps>`
 `;
 
 const RadioText = styled.div`
-  width: 58px;
-  margin: 0 auto;
-  line-height: 1.3;
-  text-align: center;
+  color: ${theme.text.alt};
   font-size: 10px;
   font-weight: 400;
-  color: ${theme.text.alt};
+  line-height: 1.3;
+  margin: 0 auto;
+  text-align: center;
+  width: 58px;
 `;
 
 const HiddenRadio = styled.input`
@@ -239,30 +239,30 @@ const HiddenRadio = styled.input`
 `;
 
 export const NextButton = styled.button<NextButtonProps>`
+  align-items: center;
   background-color: ${props =>
     props.disabled ? theme.colors.disabled : theme.colors.pink};
   border: none;
-  color: ${theme.text.reverse};
-  align-items: center;
   border-radius: 8px;
+  color: ${theme.text.reverse};
+  font-size: 16px;
+  font-weight: 700;
   margin: 24px 0 24px;
   padding: 16px;
-  font-weight: 700;
   text-decoration: none;
-  font-size: 16px;
 `;
 
 export const ResultLink = styled(Link)<ResultLinkProps>`
+  align-items: center;
   background-color: ${props =>
     props.disabled ? theme.colors.disabled : theme.colors.pink};
-  color: ${theme.text.reverse};
-  align-items: center;
   border-radius: 8px;
+  color: ${theme.text.reverse};
+  font-size: 16px;
+  font-weight: 700;
   margin: 24px 0 24px;
   padding: 16px;
-  font-weight: 700;
   text-decoration: none;
-  font-size: 16px;
 `;
 
 export default Analysis;
