@@ -53,7 +53,7 @@ const Analysis: FC<{}> = () => {
     });
   };
 
-  const onClick = () => {
+  const onNextClicked = () => {
     setCurrentSliceStart(currentPage * perPage);
     setCurrentSliceEnd((currentPage + 1) * perPage);
     setCurrentPage(currentPage + 1);
@@ -65,13 +65,15 @@ const Analysis: FC<{}> = () => {
     });
   };
 
+  const onBackClicked = () => {};
+
   const nextButton =
     currentPage === pageCount ? (
       <NextButton to="/result" disabled={disableNextButton}>
         診断結果へ
       </NextButton>
     ) : (
-      <NextButton onClick={onClick} disabled={disableNextButton}>
+      <NextButton onClick={onNextClicked} disabled={disableNextButton}>
         次へ進む
       </NextButton>
     );
@@ -90,6 +92,7 @@ const Analysis: FC<{}> = () => {
         onChanged={onChanged}
       />
       {nextButton}
+      <BackButton onClick={onBackClicked}>戻る</BackButton>
     </Section>
   );
 };
@@ -107,6 +110,19 @@ const Description = styled.p`
   color: ${theme.text.alt};
   font-size: 14px;
   margin: 4em auto 1em;
+`;
+
+const BackButton = styled.button`
+  align-items: center;
+  background: transparent;
+  border: 1px solid ${theme.bg.border};
+  border-radius: 8px;
+  color: ${theme.text.secondary};
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  padding: 8px;
+  text-decoration: none;
 `;
 
 export default Analysis;

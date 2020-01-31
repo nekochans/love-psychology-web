@@ -5,6 +5,8 @@ declare module 'styled-components' {
     bg: {
       default: string;
       alt: string;
+      border: string;
+      disabled: string;
     };
     colors: {
       white: string;
@@ -12,7 +14,6 @@ declare module 'styled-components' {
       pink: string;
       darkpink: string;
       purple: string;
-      disabled: string;
     };
     text: {
       default: string;
