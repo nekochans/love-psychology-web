@@ -8,9 +8,9 @@ const Header: FC = () => {
 export default Header;
 
 const Head = styled.div`
-  background-color: ${theme.colors.pink};
   align-items: center;
+  background-color: ${theme.colors.pink};
   color: ${theme.colors.white};
-  text-align: center;
   padding: 4px 8px;
+  text-align: center;
 `;

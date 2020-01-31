@@ -3,7 +3,7 @@ import { Answer, Choice, Question } from '../../domain/analysis';
 
 export type AnalysisState = {
   questions: Question[];
-  choices?: Choice[];
+  choices: Choice[];
   answers: Answer[];
   perPage: number;
   disableNextButton: boolean;
@@ -13,6 +13,7 @@ export type AnalysisState = {
 
 export const initialState: AnalysisState = {
   questions: [],
+  choices: [],
   answers: [],
   perPage: 5,
   disableNextButton: true,

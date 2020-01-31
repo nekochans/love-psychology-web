@@ -12,12 +12,17 @@ declare module 'styled-components' {
       pink: string;
       darkpink: string;
       purple: string;
+      disabled: string;
     };
     text: {
       default: string;
       secondary: string;
       alt: string;
       reverse: string;
+    };
+    radio: {
+      dark: string;
+      secondary: string;
     };
   }
 }

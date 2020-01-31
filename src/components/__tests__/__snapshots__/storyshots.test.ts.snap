@@ -48,3 +48,1014 @@ Array [
   </button>,
 ]
 `;
+
+exports[`Storyshots Footer Show App 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="sc-bdVaJa ixGWGg"
+    >
+      Copyright (c) 2020 nekochans
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots Header Show App 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="sc-bwzfXH jHMdKz"
+    >
+      愛の心理学
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots Home Show App 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="sc-htpNat epUcfG"
+    >
+      <div
+        className="sc-bxivhb fCyEHe"
+      >
+        <div
+          className="sc-ifAKCX eLlJpx"
+        >
+          <h2
+            className="sc-EHOje kWsDpb"
+          >
+            愛の三角理論
+          </h2>
+          <p
+            className="sc-bZQynM fLrYvn"
+          >
+            愛の三角形理論についての解説を追加する。
+          </p>
+          <p
+            className="sc-bZQynM fLrYvn"
+          >
+            1行目。あああああああああああああああああああああああああああああああああああああああああああ。
+          </p>
+          <p
+            className="sc-bZQynM fLrYvn"
+          >
+            2行目。あああああああああああああああああああああああああああああああああああああああああああ。
+          </p>
+          <p
+            className="sc-bZQynM fLrYvn"
+          >
+            3行目。あああああああああああああああああああああああああああああああああああああああああああ。
+          </p>
+          <p
+            className="sc-bZQynM fLrYvn"
+          >
+            4行目。あああああああああああああああああああああああああああああああああああああああああああ。
+          </p>
+        </div>
+        <div
+          className="sc-htoDjs cbmKsO"
+        >
+          <div
+            className="sc-gzVnrw ehmlXF"
+          >
+            <div>
+              <h3
+                className="sc-dnqmqq kCkiZH"
+              >
+                親密性（intimacy）
+              </h3>
+              <p
+                className="sc-iwsKbI ctEtgA"
+              >
+                親密性についての解説を追加する。あああああああああああああああああああああああああああああああああああああああああああ。
+              </p>
+            </div>
+          </div>
+          <div
+            className="sc-gzVnrw ehmlXF"
+          >
+            <div>
+              <h3
+                className="sc-dnqmqq kCkiZH"
+              >
+                情熱（passion）
+              </h3>
+              <p
+                className="sc-iwsKbI ctEtgA"
+              >
+                情熱についての解説を追加する。あああああああああああああああああああああああああああああああああああああああああああ。
+              </p>
+            </div>
+          </div>
+          <div
+            className="sc-gzVnrw ehmlXF"
+          >
+            <div>
+              <h3
+                className="sc-dnqmqq kCkiZH"
+              >
+                コミットメント（commitment）
+              </h3>
+              <p
+                className="sc-iwsKbI ctEtgA"
+              >
+                コミットメントについての解説を追加する。あああああああああああああああああああああああああああああああああああああああああああ。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        className="sc-gZMcBi hfduDF"
+        href="/analysis"
+        onClick={[Function]}
+      >
+        <span>
+          診断する！
+        </span>
+      </a>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots NextButton Show Disable 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <button
+      className="sc-gqjmRU dYKCAa"
+      disabled={true}
+    >
+      次へ進む
+    </button>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots NextButton Show Enable 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <button
+      className="sc-gqjmRU jzwNPt"
+      disabled={false}
+    >
+      次へ進む
+    </button>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots QuestionList Show App 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <ul
+      className="sc-jTzLTM EHGXi"
+    >
+      <li
+        className="sc-fjdhpX dRFUAB"
+      >
+        <div
+          name="1"
+        >
+          <p
+            className="sc-VigVT evFsfx"
+          >
+            Q
+            1
+            . 
+            私にとって○○さんとの関係よりも大切なものなど他にはない
+          </p>
+          <fieldset
+            className="sc-jzJRlG gODPlR"
+          >
+            <ul
+              className="sc-cSHVUG dDTqaT"
+            >
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={true}
+                  className="sc-chPdSV gRERlP"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="1"
+                    type="radio"
+                    value="1"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  とても当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="1"
+                    type="radio"
+                    value="2"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  やや当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="1"
+                    type="radio"
+                    value="3"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  どちらともいえない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="1"
+                    type="radio"
+                    value="4"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  あまり当てはまらない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="1"
+                    type="radio"
+                    value="5"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  全く当てはまらない
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX dRFUAB"
+      >
+        <div
+          name="2"
+        >
+          <p
+            className="sc-VigVT evFsfx"
+          >
+            Q
+            2
+            . 
+            私と○○さんとの関わりは揺るぎないものである
+          </p>
+          <fieldset
+            className="sc-jzJRlG gODPlR"
+          >
+            <ul
+              className="sc-cSHVUG dDTqaT"
+            >
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="2"
+                    type="radio"
+                    value="1"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  とても当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={true}
+                  className="sc-chPdSV gRERlP"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="2"
+                    type="radio"
+                    value="2"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  やや当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="2"
+                    type="radio"
+                    value="3"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  どちらともいえない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="2"
+                    type="radio"
+                    value="4"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  あまり当てはまらない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="2"
+                    type="radio"
+                    value="5"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  全く当てはまらない
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX dRFUAB"
+      >
+        <div
+          name="3"
+        >
+          <p
+            className="sc-VigVT evFsfx"
+          >
+            Q
+            3
+            . 
+            ○○さんは私にとって非常に魅力的な人だ
+          </p>
+          <fieldset
+            className="sc-jzJRlG gODPlR"
+          >
+            <ul
+              className="sc-cSHVUG dDTqaT"
+            >
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="3"
+                    type="radio"
+                    value="1"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  とても当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="3"
+                    type="radio"
+                    value="2"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  やや当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="3"
+                    type="radio"
+                    value="3"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  どちらともいえない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="3"
+                    type="radio"
+                    value="4"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  あまり当てはまらない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="3"
+                    type="radio"
+                    value="5"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  全く当てはまらない
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX dRFUAB"
+      >
+        <div
+          name="4"
+        >
+          <p
+            className="sc-VigVT evFsfx"
+          >
+            Q
+            4
+            . 
+            ○○さんとの関係は居心地のよいものである
+          </p>
+          <fieldset
+            className="sc-jzJRlG gODPlR"
+          >
+            <ul
+              className="sc-cSHVUG dDTqaT"
+            >
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="4"
+                    type="radio"
+                    value="1"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  とても当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="4"
+                    type="radio"
+                    value="2"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  やや当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="4"
+                    type="radio"
+                    value="3"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  どちらともいえない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="4"
+                    type="radio"
+                    value="4"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  あまり当てはまらない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="4"
+                    type="radio"
+                    value="5"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  全く当てはまらない
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX dRFUAB"
+      >
+        <div
+          name="5"
+        >
+          <p
+            className="sc-VigVT evFsfx"
+          >
+            Q
+            5
+            . 
+            ○○さんについて空想にふけることがある
+          </p>
+          <fieldset
+            className="sc-jzJRlG gODPlR"
+          >
+            <ul
+              className="sc-cSHVUG dDTqaT"
+            >
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="5"
+                    type="radio"
+                    value="1"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  とても当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="5"
+                    type="radio"
+                    value="2"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  やや当てはまる
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="5"
+                    type="radio"
+                    value="3"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  どちらともいえない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="5"
+                    type="radio"
+                    value="4"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  あまり当てはまらない
+                </div>
+              </li>
+              <li
+                className="sc-kAzzGY hBTuAY"
+              >
+                <label
+                  checked={false}
+                  className="sc-chPdSV MpnIQ"
+                >
+                  <input
+                    className="sc-kGXeez dRlIRT"
+                    name="5"
+                    type="radio"
+                    value="5"
+                  />
+                </label>
+                <div
+                  className="sc-kgoBCf kROKqJ"
+                >
+                  全く当てはまらない
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots Result Show App 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div>
+      診断結果を表示する
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;

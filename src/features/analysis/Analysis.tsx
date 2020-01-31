@@ -1,19 +1,26 @@
-import React, { FC, useEffect, useState, ChangeEvent } from 'react';
-import { Link } from 'react-router-dom';
+import React, { FC, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { scroller, animateScroll as scroll } from 'react-scroll';
 import analysis, { AnalysisState, AnswersPayload } from './analysisSlice';
 import { RootState } from '../../app/rootReducer';
+import { theme } from '../../theme';
+import QuestionList, { InputEvent } from './QuestionList';
+import NextButton from './NextButton';
 
-type InputEvent = ChangeEvent<HTMLInputElement>;
 type ChangeHandler = (e: InputEvent) => void;
 
 const Analysis: FC<{}> = () => {
   const dispatch = useDispatch();
 
-  const { questions, choices, perPage, disableNextButton } = useSelector<
-    RootState,
-    AnalysisState
-  >(state => state.analysis);
+  const {
+    questions,
+    choices,
+    perPage,
+    disableNextButton,
+    answers,
+  } = useSelector<RootState, AnalysisState>(state => state.analysis);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [currentSliceStart, setCurrentSliceStart] = useState(0);
   const [currentSliceEnd, setCurrentSliceEnd] = useState(perPage);
@@ -36,6 +43,14 @@ const Analysis: FC<{}> = () => {
     };
 
     dispatch(analysis.actions.updateAnswers(payload));
+
+    const scrollTo = parseInt(e.target.name, 10) + 1;
+    scroller.scrollTo(scrollTo.toString(), {
+      duration: 350,
+      delay: 100,
+      smooth: true,
+      offset: -140,
+    });
   };
 
   const onClick = () => {
@@ -44,51 +59,54 @@ const Analysis: FC<{}> = () => {
     setCurrentPage(currentPage + 1);
 
     dispatch(analysis.actions.updateDisableNextButton(true));
+
+    scroll.scrollToTop({
+      duration: 0,
+    });
   };
 
+  const nextButton =
+    currentPage === pageCount ? (
+      <NextButton to="/result" disabled={disableNextButton}>
+        診断結果へ
+      </NextButton>
+    ) : (
+      <NextButton onClick={onClick} disabled={disableNextButton}>
+        次へ進む
+      </NextButton>
+    );
+
   return (
-    <div>
-      <h1>質問一覧を表示する</h1>
-      <ul>
-        {questions.slice(currentSliceStart, currentSliceEnd).map(question => (
-          <li key={question.id}>
-            <p>
-              {question.id}. {question.text}
-            </p>
-            <fieldset>
-              <ul>
-                {choices instanceof Array
-                  ? choices.map(choice => (
-                      <li key={choice.value}>
-                        <input
-                          type="radio"
-                          name={question.id.toString()}
-                          value={choice.value}
-                          onChange={onChanged}
-                        />
-                        <div>{choice.text}</div>
-                      </li>
-                    ))
-                  : ''}
-              </ul>
-            </fieldset>
-          </li>
-        ))}
-      </ul>
-      {currentPage === pageCount ? (
-        <Link
-          to="/result"
-          style={{ pointerEvents: disableNextButton ? 'none' : 'auto' }}
-        >
-          診断結果へ
-        </Link>
-      ) : (
-        <button type="submit" disabled={disableNextButton} onClick={onClick}>
-          次へ
-        </button>
-      )}
-    </div>
+    <Section>
+      <Description>
+        恋人や片思いの人を思い浮かべながら回答しましょう。
+      </Description>
+      <QuestionList
+        questions={questions}
+        choices={choices}
+        answers={answers}
+        currentSliceStart={currentSliceStart}
+        currentSliceEnd={currentSliceEnd}
+        onChanged={onChanged}
+      />
+      {nextButton}
+    </Section>
   );
 };
+
+const Section = styled.div`
+  align-items: center;
+  background-color: ${theme.bg.default};
+  color: ${theme.text.default};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const Description = styled.p`
+  color: ${theme.text.alt};
+  font-size: 14px;
+  margin: 4em auto 1em;
+`;
 
 export default Analysis;

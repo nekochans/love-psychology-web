@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { theme } from '../theme';
-import { MOBILE_BREAK } from '../theme/layout';
+import { theme } from '../../theme';
+import { MOBILE_BREAK } from '../../theme/layout';
 
 const Home: FC = () => {
   return (
@@ -54,13 +54,9 @@ const Home: FC = () => {
           </ElementSection>
         </Elements>
       </Content>
-      <TestLink to="/analysis">
+      <AnalysisLink to="/analysis">
         <span>診断する！</span>
-      </TestLink>
-
-      <TestLink to="/counter">
-        <span>Counter</span>
-      </TestLink>
+      </AnalysisLink>
     </Section>
   );
 };
@@ -71,36 +67,28 @@ const Section = styled.div`
   background-color: ${theme.bg.default};
   color: ${theme.text.default};
   display: flex;
-  flex: 1 0 auto;
   flex-direction: column;
-  position: relative;
   justify-content: center;
 `;
 
 const Content = styled.div`
-  flex-direction: column;
-  display: flex;
-  flex: auto;
-  align-self: stretch;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Text = styled.div`
-  margin: 20px 32px 20px 32px;
-  text-align: left;
   align-items: flex-start;
+  margin: 20px 32px 20px 32px;
+  position: relative;
+  text-align: left;
   z-index: 2;
 
-  position: relative;
-
   @media (max-width: ${MOBILE_BREAK}px) {
-    margin-top: 0;
-    margin-bottom: 16px;
-    text-align: center;
     align-items: center;
+    margin-bottom: 16px;
+    margin-top: 0;
+    text-align: center;
   }
 
   @media (max-width: 1200px) {
@@ -110,10 +98,10 @@ const Text = styled.div`
 
 const Tagline = styled.h2`
   color: ${theme.text.default};
-  font-weight: 900;
   font-size: 40px;
-  margin-top: 16px;
+  font-weight: 900;
   margin-bottom: 32px;
+  margin-top: 16px;
   text-align: center;
 
   @media (max-width: ${MOBILE_BREAK}px) {
@@ -124,10 +112,10 @@ const Tagline = styled.h2`
 const ThisCopy = styled.p`
   color: ${theme.text.default};
   font-size: 18px;
-  line-height: 1.6;
   font-weight: 500;
-  max-width: 580px;
+  line-height: 1.6;
   margin: 0;
+  max-width: 580px;
   padding: 0;
 
   &:not(:first-of-type) {
@@ -140,41 +128,41 @@ const ThisCopy = styled.p`
 `;
 
 // 3つの要素
-export const ElementSection = styled.div`
-  display: flex;
-  justify-self: center;
-  margin: auto;
-  flex-direction: column;
-  padding: 26px;
+const ElementSection = styled.div`
   background-color: ${theme.bg.default};
   border: 3px solid ${theme.colors.pink};
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin: auto;
   max-width: 480px;
+  padding: 26px;
   z-index: 1;
 
-  // 580 - 16*2
+  /* 580 - 16*2 */
   @media (max-width: 548px) {
+    margin: 0 8px;
     max-width: 100%;
     padding: 15px 10px 15px;
-    margin: 0 8px;
   }
 `;
 
-export const Elements = styled.div`
+const Elements = styled.div`
   display: grid;
-  max-width: 100%;
-  padding: 30px 5% 30px;
-  grid-template-columns: minmax(400, auto) minmax(400, auto) minmax(400, auto);
-  grid-template-areas: 'one two three';
   grid-column-gap: 32px;
   grid-row-gap: 32px;
+  grid-template-areas: 'one two three';
+  grid-template-columns: minmax(400, auto) minmax(400, auto) minmax(400, auto);
   justify-content: center;
   justify-items: stretch;
+  max-width: 100%;
+  padding: 30px 5% 30px;
 
   > div {
-    min-width: 280px;
-    margin: 0;
     justify-content: space-between;
+    margin: 0;
+    min-width: 280px;
 
     &:first-of-type {
       justify-self: center;
@@ -182,38 +170,39 @@ export const Elements = styled.div`
   }
 
   @media (max-width: 1334px) {
-    padding: 30px 5px 20px;
+    grid-row-gap: 32px;
+    grid-template-areas: 'one' 'two' 'three';
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content min-content;
-    grid-template-areas: 'one' 'two' 'three';
-    grid-row-gap: 32px;
+    padding: 30px 5px 20px;
   }
 `;
 
-export const Element = styled.h3`
+const Element = styled.h3`
+  color: ${theme.text.default};
   font-size: 20px;
   font-weight: 600;
-  color: ${theme.text.default};
   margin-bottom: 8px;
   text-align: center;
 `;
 
-export const ElementDescription = styled.p`
+const ElementDescription = styled.p`
+  color: ${theme.text.secondary};
   font-size: 18px;
   font-weight: 400;
-  color: ${theme.text.secondary};
   line-height: 1.3;
 `;
 
 // 診断ページへのリンク
-export const TestLink = styled(Link)`
-  background-color: ${theme.colors.pink};
-  color: ${theme.text.reverse};
+const AnalysisLink = styled(Link)`
   align-items: center;
+  background-color: ${theme.colors.pink};
   border-radius: 8px;
+  color: ${theme.text.reverse};
+  font-size: 16px;
+  font-weight: 700;
   margin: 24px 0 24px;
   padding: 16px;
-  font-weight: 700;
   text-decoration: none;
 `;
 

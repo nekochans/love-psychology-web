@@ -6,8 +6,7 @@ import GlobalStyle from '../theme/globalStyle';
 import { theme } from '../theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Counter from '../features/counter/Counter';
-import Home from '../components/Home';
+import Home from '../features/home/Home';
 import Analysis from '../features/analysis/Analysis';
 import Result from '../features/result/Result';
 
@@ -18,9 +17,6 @@ const App: FC = () => {
         <GlobalStyle />
         <Header />
         <Switch>
-          <Route path="/counter">
-            <Counter />
-          </Route>
           <Route path="/analysis">
             <Analysis />
           </Route>

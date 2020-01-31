@@ -82,13 +82,9 @@ export const fetchQuestions = (): Question[] => {
 export const fetchChoices = (): Choice[] => {
   return [
     { value: '1', text: 'とても当てはまる' },
-    { value: '2', text: '' },
-    { value: '3', text: 'やや当てはまる' },
-    { value: '4', text: '' },
-    { value: '5', text: 'どちらともいえない' },
-    { value: '6', text: '' },
-    { value: '7', text: 'あまり当てはまらない' },
-    { value: '8', text: '' },
-    { value: '9', text: '全く当てはまらない' },
+    { value: '2', text: 'やや当てはまる' },
+    { value: '3', text: 'どちらともいえない' },
+    { value: '4', text: 'あまり当てはまらない' },
+    { value: '5', text: '全く当てはまらない' },
   ];
 };
