@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint --fix 'src/**/*.{css,tsx}'",
+    "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.{css,tsx}'",
     "format": "eslint --fix --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint --fix 'src/**/*.{css,tsx}'",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
