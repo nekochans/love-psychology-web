@@ -65,7 +65,15 @@ const Analysis: FC<{}> = () => {
     });
   };
 
-  const onBackClicked = () => {};
+  const onBackClicked = () => {
+    setCurrentSliceStart((currentPage - 2) * perPage);
+    setCurrentSliceEnd((currentPage - 1) * perPage);
+    setCurrentPage(currentPage - 1);
+
+    scroll.scrollToTop({
+      duration: 0,
+    });
+  };
 
   const nextButton =
     currentPage === pageCount ? (
@@ -92,7 +100,7 @@ const Analysis: FC<{}> = () => {
         onChanged={onChanged}
       />
       {nextButton}
-      <BackButton onClick={onBackClicked}>戻る</BackButton>
+      {currentPage > 1 && <BackButton onClick={onBackClicked}>戻る</BackButton>}
     </Section>
   );
 };
