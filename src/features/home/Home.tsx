@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { theme } from '../theme';
-import { MOBILE_BREAK } from '../theme/layout';
+import { theme } from '../../theme';
+import { MOBILE_BREAK } from '../../theme/layout';
 
 const Home: FC = () => {
   return (
@@ -128,7 +128,7 @@ const ThisCopy = styled.p`
 `;
 
 // 3つの要素
-export const ElementSection = styled.div`
+const ElementSection = styled.div`
   background-color: ${theme.bg.default};
   border: 3px solid ${theme.colors.pink};
   border-radius: 8px;
@@ -148,7 +148,7 @@ export const ElementSection = styled.div`
   }
 `;
 
-export const Elements = styled.div`
+const Elements = styled.div`
   display: grid;
   grid-column-gap: 32px;
   grid-row-gap: 32px;
@@ -178,7 +178,7 @@ export const Elements = styled.div`
   }
 `;
 
-export const Element = styled.h3`
+const Element = styled.h3`
   color: ${theme.text.default};
   font-size: 20px;
   font-weight: 600;
@@ -186,7 +186,7 @@ export const Element = styled.h3`
   text-align: center;
 `;
 
-export const ElementDescription = styled.p`
+const ElementDescription = styled.p`
   color: ${theme.text.secondary};
   font-size: 18px;
   font-weight: 400;
@@ -194,7 +194,7 @@ export const ElementDescription = styled.p`
 `;
 
 // 診断ページへのリンク
-export const AnalysisLink = styled(Link)`
+const AnalysisLink = styled(Link)`
   align-items: center;
   background-color: ${theme.colors.pink};
   border-radius: 8px;
