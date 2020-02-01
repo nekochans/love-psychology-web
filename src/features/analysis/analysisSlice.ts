@@ -11,7 +11,7 @@ export type AnalysisState = {
   errorMessage: string;
 };
 
-export const initialState: AnalysisState = {
+const initialState: AnalysisState = {
   questions: [],
   choices: [],
   answers: [],

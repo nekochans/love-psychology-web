@@ -2,6 +2,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import analysisSaga from '../features/analysis/analysisSaga';
+import resultSaga from '../features/result/resultSaga';
 
 import rootReducer from './rootReducer';
 
@@ -21,6 +22,7 @@ const setupStore = () => {
   });
 
   sagaMiddleware.run(analysisSaga);
+  sagaMiddleware.run(resultSaga);
 
   return store;
 };
