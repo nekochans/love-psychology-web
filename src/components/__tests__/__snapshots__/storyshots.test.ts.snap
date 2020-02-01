@@ -1,54 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots App Show App 1`] = `
-Array [
-  <div
-    style={
-      Object {
-        "position": "relative",
-        "zIndex": 0,
-      }
-    }
-  >
-    <div
-      className="container"
-    >
-      <div>
-        <a
-          href="/counter"
-          onClick={[Function]}
-        >
-          Counter
-        </a>
-      </div>
-    </div>
-  </div>,
-  <button
-    className="info__show-button"
-    onClick={[Function]}
-    style={
-      Object {
-        "background": "#027ac5",
-        "border": "none",
-        "borderRadius": "0 0 0 5px",
-        "color": "#fff",
-        "cursor": "pointer",
-        "display": "block",
-        "fontFamily": "sans-serif",
-        "fontSize": "12px",
-        "padding": "5px 15px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="button"
-  >
-    Show Info
-  </button>,
-]
-`;
-
 exports[`Storyshots Footer Show App 1`] = `
 Array [
   <div
@@ -284,7 +235,7 @@ Array [
     }
   >
     <button
-      className="sc-gqjmRU dYKCAa"
+      className="sc-gqjmRU dYmsGr"
       disabled={true}
     >
       次へ進む
@@ -327,7 +278,7 @@ Array [
     }
   >
     <button
-      className="sc-gqjmRU jzwNPt"
+      className="sc-gqjmRU blftXP"
       disabled={false}
     >
       次へ進む
