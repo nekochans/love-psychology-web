@@ -26,6 +26,12 @@ export type AnswersPayload = {
   start: number;
   end: number;
 };
+
+export type DisableNextButton = {
+  start: number;
+  end: number;
+};
+
 const analysis = createSlice({
   name: 'analysis',
   initialState,
@@ -85,12 +91,15 @@ const analysis = createSlice({
     },
     updateDisableNextButton: (
       state: AnalysisState,
-      action: PayloadAction<boolean>,
+      action: PayloadAction<DisableNextButton>,
     ) => {
-      return {
-        ...state,
-        disableNextButton: action.payload,
-      };
+      const answeredList = state.answers
+        .slice(action.payload.start, action.payload.end)
+        .map(answer => answer.choiceId !== '');
+
+      const disableNextButton = answeredList.indexOf(false) !== -1;
+
+      return { ...state, disableNextButton };
     },
   },
 });

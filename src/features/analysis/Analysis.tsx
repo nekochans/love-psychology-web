@@ -27,6 +27,20 @@ const Analysis: FC<{}> = () => {
 
   const pageCount = Math.ceil(questions.length / perPage);
 
+  const calculateNextSliceOptions = (currentIndex: number, length: number) => {
+    return {
+      start: currentIndex * length,
+      end: (currentIndex + 1) * length,
+    };
+  };
+
+  const calculateBackSliceOptions = (currentIndex: number, length: number) => {
+    return {
+      start: (currentIndex - 2) * length,
+      end: (currentIndex - 1) * length,
+    };
+  };
+
   useEffect(() => {
     dispatch(analysis.actions.fetchQuestions());
     dispatch(analysis.actions.fetchChoices());
@@ -54,11 +68,18 @@ const Analysis: FC<{}> = () => {
   };
 
   const onNextClicked = () => {
-    setCurrentSliceStart(currentPage * perPage);
-    setCurrentSliceEnd((currentPage + 1) * perPage);
+    const nextSliceOptions = calculateNextSliceOptions(currentPage, perPage);
+
+    setCurrentSliceStart(nextSliceOptions.start);
+    setCurrentSliceEnd(nextSliceOptions.end);
     setCurrentPage(currentPage + 1);
 
-    dispatch(analysis.actions.updateDisableNextButton(true));
+    dispatch(
+      analysis.actions.updateDisableNextButton({
+        start: nextSliceOptions.start,
+        end: nextSliceOptions.end,
+      }),
+    );
 
     scroll.scrollToTop({
       duration: 0,
@@ -66,9 +87,18 @@ const Analysis: FC<{}> = () => {
   };
 
   const onBackClicked = () => {
-    setCurrentSliceStart((currentPage - 2) * perPage);
-    setCurrentSliceEnd((currentPage - 1) * perPage);
+    const backSliceOptions = calculateBackSliceOptions(currentPage, perPage);
+
+    setCurrentSliceStart(backSliceOptions.start);
+    setCurrentSliceEnd(backSliceOptions.end);
     setCurrentPage(currentPage - 1);
+
+    dispatch(
+      analysis.actions.updateDisableNextButton({
+        start: backSliceOptions.start,
+        end: backSliceOptions.end,
+      }),
+    );
 
     scroll.scrollToTop({
       duration: 0,
