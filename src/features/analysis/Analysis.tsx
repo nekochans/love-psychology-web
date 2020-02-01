@@ -27,6 +27,20 @@ const Analysis: FC<{}> = () => {
 
   const pageCount = Math.ceil(questions.length / perPage);
 
+  const calculateNextSliceOptions = (currentIndex: number, length: number) => {
+    return {
+      start: currentIndex * length,
+      end: (currentIndex + 1) * length,
+    };
+  };
+
+  const calculateBackSliceOptions = (currentIndex: number, length: number) => {
+    return {
+      start: (currentIndex - 2) * length,
+      end: (currentIndex - 1) * length,
+    };
+  };
+
   useEffect(() => {
     dispatch(analysis.actions.fetchQuestions());
     dispatch(analysis.actions.fetchChoices());
@@ -53,12 +67,38 @@ const Analysis: FC<{}> = () => {
     });
   };
 
-  const onClick = () => {
-    setCurrentSliceStart(currentPage * perPage);
-    setCurrentSliceEnd((currentPage + 1) * perPage);
+  const onNextClicked = () => {
+    const nextSliceOptions = calculateNextSliceOptions(currentPage, perPage);
+
+    setCurrentSliceStart(nextSliceOptions.start);
+    setCurrentSliceEnd(nextSliceOptions.end);
     setCurrentPage(currentPage + 1);
 
-    dispatch(analysis.actions.updateDisableNextButton(true));
+    dispatch(
+      analysis.actions.updateDisableNextButton({
+        start: nextSliceOptions.start,
+        end: nextSliceOptions.end,
+      }),
+    );
+
+    scroll.scrollToTop({
+      duration: 0,
+    });
+  };
+
+  const onBackClicked = () => {
+    const backSliceOptions = calculateBackSliceOptions(currentPage, perPage);
+
+    setCurrentSliceStart(backSliceOptions.start);
+    setCurrentSliceEnd(backSliceOptions.end);
+    setCurrentPage(currentPage - 1);
+
+    dispatch(
+      analysis.actions.updateDisableNextButton({
+        start: backSliceOptions.start,
+        end: backSliceOptions.end,
+      }),
+    );
 
     scroll.scrollToTop({
       duration: 0,
@@ -71,7 +111,7 @@ const Analysis: FC<{}> = () => {
         診断結果へ
       </NextButton>
     ) : (
-      <NextButton onClick={onClick} disabled={disableNextButton}>
+      <NextButton onClick={onNextClicked} disabled={disableNextButton}>
         次へ進む
       </NextButton>
     );
@@ -90,6 +130,7 @@ const Analysis: FC<{}> = () => {
         onChanged={onChanged}
       />
       {nextButton}
+      {currentPage > 1 && <BackButton onClick={onBackClicked}>戻る</BackButton>}
     </Section>
   );
 };
@@ -107,6 +148,20 @@ const Description = styled.p`
   color: ${theme.text.alt};
   font-size: 14px;
   margin: 4em auto 1em;
+`;
+
+const BackButton = styled.button`
+  align-items: center;
+  background: transparent;
+  border: 1px solid ${theme.bg.border};
+  border-radius: 8px;
+  color: ${theme.text.secondary};
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  padding: 8px;
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 export default Analysis;

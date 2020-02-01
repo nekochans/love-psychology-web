@@ -30,7 +30,7 @@ type StyledButtonProps = {
 const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
   background-color: ${props =>
-    props.disabled ? theme.colors.disabled : theme.colors.pink};
+    props.disabled ? theme.bg.disabled : theme.colors.pink};
   border: none;
   border-radius: 8px;
   color: ${theme.text.reverse};
@@ -39,6 +39,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   margin: 24px 0 24px;
   padding: 16px;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export default NextButton;
