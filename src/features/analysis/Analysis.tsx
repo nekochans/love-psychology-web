@@ -161,6 +161,7 @@ const BackButton = styled.button`
   margin-bottom: 24px;
   padding: 8px;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export default Analysis;

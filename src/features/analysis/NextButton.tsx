@@ -39,6 +39,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   margin: 24px 0 24px;
   padding: 16px;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export default NextButton;
