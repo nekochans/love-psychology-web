@@ -235,7 +235,7 @@ Array [
     }
   >
     <button
-      className="sc-gqjmRU dYmsGr"
+      className="sc-gqjmRU iKvcej"
       disabled={true}
     >
       次へ進む
@@ -278,7 +278,7 @@ Array [
     }
   >
     <button
-      className="sc-gqjmRU blftXP"
+      className="sc-gqjmRU bcQnrx"
       disabled={false}
     >
       次へ進む
@@ -971,7 +971,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Result Show App 1`] = `
+exports[`Storyshots ResultSection Show App 1`] = `
 Array [
   <div
     style={
@@ -981,8 +981,33 @@ Array [
       }
     }
   >
-    <div>
-      診断結果を表示する
+    <div
+      className="sc-kpOJdX bbDaoc"
+    >
+      <p
+        className="sc-dxgOiQ hyzCHz"
+      >
+        あなたの恋人や片思いの人への愛の形は
+      </p>
+      <div
+        className="sc-ckVGcZ chCnBv"
+      >
+        <h3
+          className="sc-jKJlTe fjtvkS"
+        >
+          非愛タイプ
+        </h3>
+        <p
+          className="sc-eNQAEJ byIlrE"
+        >
+          全ての要素が足りない。表面的な人間関係
+        </p>
+        <p
+          className="sc-eNQAEJ byIlrE"
+        >
+          恋愛タイプに関するメッセージ等を記載する。あああああああああああああああああああああああああああああああああああああああああああああああ。
+        </p>
+      </div>
     </div>
   </div>,
   <button
