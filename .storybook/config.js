@@ -4,6 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { withA11y } from '@storybook/addon-a11y';
 import { MemoryRouter } from 'react-router'
 import requireContext from 'require-context.macro';
+import GlobalStyle from '../src/theme/globalStyle';
 
 const WrapperRouter = storyFn => (
   <MemoryRouter initialEntries={['/']}>{storyFn()}</MemoryRouter>
@@ -12,6 +13,7 @@ const WrapperRouter = storyFn => (
 addDecorator(withInfo);
 addDecorator(withA11y);
 addDecorator(WrapperRouter);
+addDecorator(s => <><GlobalStyle />{s()}</>);
 
 
 // automatically import all files ending in *.stories.js

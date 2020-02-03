@@ -156,12 +156,12 @@ const BackButton = styled.button`
   border: 1px solid ${theme.bg.border};
   border-radius: 8px;
   color: ${theme.text.secondary};
+  cursor: pointer;
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 24px;
   padding: 8px;
   text-decoration: none;
-  cursor: pointer;
 `;
 
 export default Analysis;

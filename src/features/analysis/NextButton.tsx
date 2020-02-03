@@ -34,12 +34,12 @@ const StyledButton = styled.button<StyledButtonProps>`
   border: none;
   border-radius: 8px;
   color: ${theme.text.reverse};
+  cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   margin: 24px 0 24px;
   padding: 16px;
   text-decoration: none;
-  cursor: pointer;
 `;
 
 export default NextButton;
