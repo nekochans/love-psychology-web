@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import result, { ResultState } from './resultSlice';
 import { RootState } from '../../app/rootReducer';
 import ResultSection from './ResultSection';
-import AllLoveTypeSection from './AllLoveTypeSection';
+import AllLoveTypesSection from './AllLoveTypesSection';
 import { theme } from '../../theme';
 
 const Result: FC<{}> = () => {
@@ -22,7 +22,7 @@ const Result: FC<{}> = () => {
   return (
     <Section>
       {loveType && <ResultSection loveType={loveType} />}
-      <AllLoveTypeSection loveTypes={allLoveTypes} />
+      <AllLoveTypesSection loveTypes={allLoveTypes} />
     </Section>
   );
 };
