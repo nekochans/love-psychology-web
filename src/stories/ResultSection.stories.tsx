@@ -7,6 +7,7 @@ export default {
 
 const props = {
   loveType: {
+    id: 1,
     type: '非愛タイプ',
     description: '全ての要素が足りない。表面的な人間関係',
     message:
