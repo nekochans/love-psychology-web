@@ -4,13 +4,17 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:stg": "yarn run create:stg && react-scripts build && yarn run removeHtmlTemplate",
+    "build:prod": "yarn run create:prod && react-scripts build && yarn run removeHtmlTemplate",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.{css,tsx}'",
     "format": "eslint --fix --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint --fix 'src/**/*.{css,tsx}'",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "create:stg": "cp public/index.stg.html public/index.html",
+    "create:prod": "cp public/index.prod.html public/index.html",
+    "removeHtmlTemplate": "rm -rf build/index.stg.html build/index.prod.html"
   },
   "eslintConfig": {
     "extends": "react-app"
