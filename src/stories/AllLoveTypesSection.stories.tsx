@@ -1,22 +1,12 @@
-export type LoveType = {
-  id: number;
-  type: string;
-  description: string;
-  message: string;
+import React from 'react';
+import AllLoveTypesSection from '../features/result/AllLoveTypesSection';
+
+export default {
+  title: 'AllLoveTypesSection',
 };
 
-export const fetchResult = (): LoveType => {
-  return {
-    id: 1,
-    type: '非愛タイプ',
-    description: '全ての要素が足りない。表面的な人間関係',
-    message:
-      '恋愛タイプに関するメッセージ等を記載する。あああああああああああああああああああああああああああああああああああああああああああああああ。',
-  };
-};
-
-export const fetchAllLoveTypes = (): LoveType[] => {
-  return [
+const props = {
+  loveTypes: [
     {
       id: 1,
       type: '非愛タイプ',
@@ -74,5 +64,11 @@ export const fetchAllLoveTypes = (): LoveType[] => {
       description: '付き合いだけが長い、いわゆる「むなしい愛」。',
       message: '3つの全ての要素が強く均一に含まれていて理想的な「愛」の形。',
     },
-  ];
+  ],
+};
+
+export const showApp = () => <AllLoveTypesSection {...props} />;
+
+showApp.story = {
+  name: 'AllLoveTypesSection',
 };
