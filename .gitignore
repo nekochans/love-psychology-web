@@ -65,3 +65,5 @@ typings/
 
 .idea
 love-psychology-web.iml
+
+public/index.html
