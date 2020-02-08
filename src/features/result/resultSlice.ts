@@ -3,6 +3,7 @@ import { LoveType } from '../../domain/result';
 
 export type ResultState = {
   loveType?: LoveType;
+  allLoveTypes?: LoveType[];
 };
 
 const initialState: ResultState = {};
@@ -19,6 +20,16 @@ const result = createSlice({
       return {
         ...state,
         loveType: action.payload,
+      };
+    },
+    fetchAllLoveTypes: () => {},
+    fetchAllLoveTypesSuccess: (
+      state: ResultState,
+      action: PayloadAction<LoveType[]>,
+    ) => {
+      return {
+        ...state,
+        allLoveTypes: action.payload,
       };
     },
   },

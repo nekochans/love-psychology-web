@@ -1,5 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots AllLoveTypesSection Show App 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="sc-bdVaJa eKALTN"
+    >
+      <button
+        className="sc-EHOje fifNWy"
+        onClick={[Function]}
+      >
+        その他の恋愛タイプを表示する
+      </button>
+      <ul
+        className="sc-bwzfXH tMvbP"
+      />
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
 exports[`Storyshots Footer Show App 1`] = `
 Array [
   <div
@@ -11,7 +61,7 @@ Array [
     }
   >
     <div
-      className="sc-bdVaJa ixGWGg"
+      className="sc-bZQynM kRgCUI"
     >
       Copyright (c) 2020 nekochans
     </div>
@@ -53,7 +103,7 @@ Array [
     }
   >
     <div
-      className="sc-bwzfXH jHMdKz"
+      className="sc-gzVnrw jidZVM"
     >
       愛の心理学
     </div>
@@ -95,91 +145,91 @@ Array [
     }
   >
     <div
-      className="sc-htpNat epUcfG"
+      className="sc-htoDjs dyAFYh"
     >
       <div
-        className="sc-bxivhb fCyEHe"
+        className="sc-dnqmqq jUDdfj"
       >
         <div
-          className="sc-ifAKCX eLlJpx"
+          className="sc-iwsKbI ccUtVV"
         >
           <h2
-            className="sc-EHOje kWsDpb"
+            className="sc-gZMcBi ijYmDA"
           >
             愛の三角理論
           </h2>
           <p
-            className="sc-bZQynM fLrYvn"
+            className="sc-gqjmRU eEghnq"
           >
             愛の三角形理論についての解説を追加する。
           </p>
           <p
-            className="sc-bZQynM fLrYvn"
+            className="sc-gqjmRU eEghnq"
           >
             1行目。あああああああああああああああああああああああああああああああああああああああああああ。
           </p>
           <p
-            className="sc-bZQynM fLrYvn"
+            className="sc-gqjmRU eEghnq"
           >
             2行目。あああああああああああああああああああああああああああああああああああああああああああ。
           </p>
           <p
-            className="sc-bZQynM fLrYvn"
+            className="sc-gqjmRU eEghnq"
           >
             3行目。あああああああああああああああああああああああああああああああああああああああああああ。
           </p>
           <p
-            className="sc-bZQynM fLrYvn"
+            className="sc-gqjmRU eEghnq"
           >
             4行目。あああああああああああああああああああああああああああああああああああああああああああ。
           </p>
         </div>
         <div
-          className="sc-htoDjs cbmKsO"
+          className="sc-jTzLTM lRlLU"
         >
           <div
-            className="sc-gzVnrw ehmlXF"
+            className="sc-VigVT bHPiAu"
           >
             <div>
               <h3
-                className="sc-dnqmqq kCkiZH"
+                className="sc-fjdhpX ifbuak"
               >
                 親密性（intimacy）
               </h3>
               <p
-                className="sc-iwsKbI ctEtgA"
+                className="sc-jzJRlG iCeOCJ"
               >
                 親密性についての解説を追加する。あああああああああああああああああああああああああああああああああああああああああああ。
               </p>
             </div>
           </div>
           <div
-            className="sc-gzVnrw ehmlXF"
+            className="sc-VigVT bHPiAu"
           >
             <div>
               <h3
-                className="sc-dnqmqq kCkiZH"
+                className="sc-fjdhpX ifbuak"
               >
                 情熱（passion）
               </h3>
               <p
-                className="sc-iwsKbI ctEtgA"
+                className="sc-jzJRlG iCeOCJ"
               >
                 情熱についての解説を追加する。あああああああああああああああああああああああああああああああああああああああああああ。
               </p>
             </div>
           </div>
           <div
-            className="sc-gzVnrw ehmlXF"
+            className="sc-VigVT bHPiAu"
           >
             <div>
               <h3
-                className="sc-dnqmqq kCkiZH"
+                className="sc-fjdhpX ifbuak"
               >
                 コミットメント（commitment）
               </h3>
               <p
-                className="sc-iwsKbI ctEtgA"
+                className="sc-jzJRlG iCeOCJ"
               >
                 コミットメントについての解説を追加する。あああああああああああああああああああああああああああああああああああああああああああ。
               </p>
@@ -188,7 +238,7 @@ Array [
         </div>
       </div>
       <a
-        className="sc-gZMcBi hfduDF"
+        className="sc-cSHVUG kBSkYT"
         href="/analysis"
         onClick={[Function]}
       >
@@ -235,7 +285,7 @@ Array [
     }
   >
     <button
-      className="sc-gqjmRU iKvcej"
+      className="sc-kAzzGY hqIJNa"
       disabled={true}
     >
       次へ進む
@@ -278,7 +328,7 @@ Array [
     }
   >
     <button
-      className="sc-gqjmRU bcQnrx"
+      className="sc-kAzzGY fnzXcl"
       disabled={false}
     >
       次へ進む
@@ -321,16 +371,16 @@ Array [
     }
   >
     <ul
-      className="sc-jTzLTM EHGXi"
+      className="sc-kgoBCf gEGBBN"
     >
       <li
-        className="sc-fjdhpX dRFUAB"
+        className="sc-kGXeez deKNnV"
       >
         <div
           name="1"
         >
           <p
-            className="sc-VigVT evFsfx"
+            className="sc-chPdSV iIITck"
           >
             Q
             1
@@ -338,107 +388,107 @@ Array [
             私にとって○○さんとの関係よりも大切なものなど他にはない
           </p>
           <fieldset
-            className="sc-jzJRlG gODPlR"
+            className="sc-kpOJdX OavVn"
           >
             <ul
-              className="sc-cSHVUG dDTqaT"
+              className="sc-dxgOiQ cmvnKo"
             >
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={true}
-                  className="sc-chPdSV gRERlP"
+                  className="sc-jKJlTe cUmqxr"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="1"
                     type="radio"
                     value="1"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   とても当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="1"
                     type="radio"
                     value="2"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   やや当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="1"
                     type="radio"
                     value="3"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   どちらともいえない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="1"
                     type="radio"
                     value="4"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   あまり当てはまらない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="1"
                     type="radio"
                     value="5"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   全く当てはまらない
                 </div>
@@ -448,13 +498,13 @@ Array [
         </div>
       </li>
       <li
-        className="sc-fjdhpX dRFUAB"
+        className="sc-kGXeez deKNnV"
       >
         <div
           name="2"
         >
           <p
-            className="sc-VigVT evFsfx"
+            className="sc-chPdSV iIITck"
           >
             Q
             2
@@ -462,107 +512,107 @@ Array [
             私と○○さんとの関わりは揺るぎないものである
           </p>
           <fieldset
-            className="sc-jzJRlG gODPlR"
+            className="sc-kpOJdX OavVn"
           >
             <ul
-              className="sc-cSHVUG dDTqaT"
+              className="sc-dxgOiQ cmvnKo"
             >
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="2"
                     type="radio"
                     value="1"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   とても当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={true}
-                  className="sc-chPdSV gRERlP"
+                  className="sc-jKJlTe cUmqxr"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="2"
                     type="radio"
                     value="2"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   やや当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="2"
                     type="radio"
                     value="3"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   どちらともいえない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="2"
                     type="radio"
                     value="4"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   あまり当てはまらない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="2"
                     type="radio"
                     value="5"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   全く当てはまらない
                 </div>
@@ -572,13 +622,13 @@ Array [
         </div>
       </li>
       <li
-        className="sc-fjdhpX dRFUAB"
+        className="sc-kGXeez deKNnV"
       >
         <div
           name="3"
         >
           <p
-            className="sc-VigVT evFsfx"
+            className="sc-chPdSV iIITck"
           >
             Q
             3
@@ -586,107 +636,107 @@ Array [
             ○○さんは私にとって非常に魅力的な人だ
           </p>
           <fieldset
-            className="sc-jzJRlG gODPlR"
+            className="sc-kpOJdX OavVn"
           >
             <ul
-              className="sc-cSHVUG dDTqaT"
+              className="sc-dxgOiQ cmvnKo"
             >
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="3"
                     type="radio"
                     value="1"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   とても当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="3"
                     type="radio"
                     value="2"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   やや当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="3"
                     type="radio"
                     value="3"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   どちらともいえない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="3"
                     type="radio"
                     value="4"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   あまり当てはまらない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="3"
                     type="radio"
                     value="5"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   全く当てはまらない
                 </div>
@@ -696,13 +746,13 @@ Array [
         </div>
       </li>
       <li
-        className="sc-fjdhpX dRFUAB"
+        className="sc-kGXeez deKNnV"
       >
         <div
           name="4"
         >
           <p
-            className="sc-VigVT evFsfx"
+            className="sc-chPdSV iIITck"
           >
             Q
             4
@@ -710,107 +760,107 @@ Array [
             ○○さんとの関係は居心地のよいものである
           </p>
           <fieldset
-            className="sc-jzJRlG gODPlR"
+            className="sc-kpOJdX OavVn"
           >
             <ul
-              className="sc-cSHVUG dDTqaT"
+              className="sc-dxgOiQ cmvnKo"
             >
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="4"
                     type="radio"
                     value="1"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   とても当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="4"
                     type="radio"
                     value="2"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   やや当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="4"
                     type="radio"
                     value="3"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   どちらともいえない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="4"
                     type="radio"
                     value="4"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   あまり当てはまらない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="4"
                     type="radio"
                     value="5"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   全く当てはまらない
                 </div>
@@ -820,13 +870,13 @@ Array [
         </div>
       </li>
       <li
-        className="sc-fjdhpX dRFUAB"
+        className="sc-kGXeez deKNnV"
       >
         <div
           name="5"
         >
           <p
-            className="sc-VigVT evFsfx"
+            className="sc-chPdSV iIITck"
           >
             Q
             5
@@ -834,107 +884,107 @@ Array [
             ○○さんについて空想にふけることがある
           </p>
           <fieldset
-            className="sc-jzJRlG gODPlR"
+            className="sc-kpOJdX OavVn"
           >
             <ul
-              className="sc-cSHVUG dDTqaT"
+              className="sc-dxgOiQ cmvnKo"
             >
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="5"
                     type="radio"
                     value="1"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   とても当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="5"
                     type="radio"
                     value="2"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   やや当てはまる
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="5"
                     type="radio"
                     value="3"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   どちらともいえない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="5"
                     type="radio"
                     value="4"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   あまり当てはまらない
                 </div>
               </li>
               <li
-                className="sc-kAzzGY hBTuAY"
+                className="sc-ckVGcZ jXqYmh"
               >
                 <label
                   checked={false}
-                  className="sc-chPdSV MpnIQ"
+                  className="sc-jKJlTe kQbVrh"
                 >
                   <input
-                    className="sc-kGXeez dRlIRT"
+                    className="sc-hMqMXs eSemHE"
                     name="5"
                     type="radio"
                     value="5"
                   />
                 </label>
                 <div
-                  className="sc-kgoBCf kROKqJ"
+                  className="sc-eNQAEJ eoSfYn"
                 >
                   全く当てはまらない
                 </div>
@@ -982,28 +1032,28 @@ Array [
     }
   >
     <div
-      className="sc-kpOJdX bbDaoc"
+      className="sc-kEYyzF dBvYTS"
     >
       <p
-        className="sc-dxgOiQ hyzCHz"
+        className="sc-kkGfuU OFveG"
       >
         あなたの恋人や片思いの人への愛の形は
       </p>
       <div
-        className="sc-ckVGcZ chCnBv"
+        className="sc-iAyFgw drZXZx"
       >
         <h3
-          className="sc-jKJlTe fjtvkS"
+          className="sc-hSdWYo bPNknF"
         >
           非愛タイプ
         </h3>
         <p
-          className="sc-eNQAEJ byIlrE"
+          className="sc-eHgmQL dXFVLj"
         >
           全ての要素が足りない。表面的な人間関係
         </p>
         <p
-          className="sc-eNQAEJ byIlrE"
+          className="sc-eHgmQL dXFVLj"
         >
           恋愛タイプに関するメッセージ等を記載する。あああああああああああああああああああああああああああああああああああああああああああああああ。
         </p>
