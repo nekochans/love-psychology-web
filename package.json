@@ -14,7 +14,8 @@
     "build-storybook": "build-storybook -s public",
     "create:stg": "cp public/index.stg.html public/index.html",
     "create:prod": "cp public/index.prod.html public/index.html",
-    "removeHtmlTemplate": "rm -rf build/index.stg.html build/index.prod.html"
+    "removeHtmlTemplate": "rm -rf build/index.stg.html build/index.prod.html",
+    "deploy": "./deploy.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
