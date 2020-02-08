@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
+    "start": "yarn run create:stg && react-scripts start",
     "build:stg": "yarn run create:stg && react-scripts build && yarn run removeHtmlTemplate",
     "build:prod": "yarn run create:prod && react-scripts build && yarn run removeHtmlTemplate",
     "test": "react-scripts test",
