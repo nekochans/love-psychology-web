@@ -66,4 +66,8 @@ typings/
 .idea
 love-psychology-web.iml
 
+# HTML Template
 public/index.html
+
+# Static storybook
+storybook-static
