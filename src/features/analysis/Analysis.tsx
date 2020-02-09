@@ -14,6 +14,7 @@ const Analysis: FC<{}> = () => {
   const dispatch = useDispatch();
 
   const {
+    isLoading,
     questions,
     choices,
     perPage,
@@ -116,8 +117,10 @@ const Analysis: FC<{}> = () => {
       </NextButton>
     );
 
-  return (
-    <Section>
+  const section = isLoading ? (
+    <h3>Loading...</h3>
+  ) : (
+    <div>
       <Description>
         恋人や片思いの人を思い浮かべながら回答しましょう。
       </Description>
@@ -131,8 +134,10 @@ const Analysis: FC<{}> = () => {
       />
       {nextButton}
       {currentPage > 1 && <BackButton onClick={onBackClicked}>戻る</BackButton>}
-    </Section>
+    </div>
   );
+
+  return <Section>{section}</Section>;
 };
 
 const Section = styled.div`

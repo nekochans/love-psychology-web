@@ -10,21 +10,26 @@ import { theme } from '../../theme';
 const Result: FC<{}> = () => {
   const dispatch = useDispatch();
 
-  const { loveType, allLoveTypes } = useSelector<RootState, ResultState>(
-    state => state.result,
-  );
+  const { loveType, allLoveTypes, isLoading } = useSelector<
+    RootState,
+    ResultState
+  >(state => state.result);
 
   useEffect(() => {
     dispatch(result.actions.fetchResult());
     dispatch(result.actions.fetchAllLoveTypes());
   }, [dispatch]);
 
-  return (
-    <Section>
+  const section = isLoading ? (
+    <h3>Loading...</h3>
+  ) : (
+    <div>
       {loveType && <ResultSection loveType={loveType} />}
       <AllLoveTypesSection loveTypes={allLoveTypes} />
-    </Section>
+    </div>
   );
+
+  return <Section>{section}</Section>;
 };
 
 const Section = styled.div`
