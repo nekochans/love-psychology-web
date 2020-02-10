@@ -56,6 +56,7 @@ typings/
 
 # dotenv environment variables file
 .env
+.envrc
 
 # next.js build output
 .next
@@ -65,3 +66,9 @@ typings/
 
 .idea
 love-psychology-web.iml
+
+# HTML Template
+public/index.html
+
+# Static storybook
+storybook-static
