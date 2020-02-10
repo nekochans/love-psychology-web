@@ -1,11 +1,10 @@
 import React, { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styled from 'styled-components';
 import result, { ResultState } from './resultSlice';
 import { RootState } from '../../app/rootReducer';
 import ResultSection from './ResultSection';
 import AllLoveTypesSection from './AllLoveTypesSection';
-import { theme } from '../../theme';
+import Loading from '../../components/Loading';
 
 const Result: FC<{}> = () => {
   const dispatch = useDispatch();
@@ -21,7 +20,7 @@ const Result: FC<{}> = () => {
   }, [dispatch]);
 
   const section = isLoading ? (
-    <h3>Loading...</h3>
+    <Loading />
   ) : (
     <div>
       {loveType && <ResultSection loveType={loveType} />}
@@ -29,15 +28,7 @@ const Result: FC<{}> = () => {
     </div>
   );
 
-  return <Section>{section}</Section>;
+  return <div>{section}</div>;
 };
-
-const Section = styled.div`
-  background-color: ${theme.bg.default};
-  color: ${theme.text.default};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
 
 export default Result;
