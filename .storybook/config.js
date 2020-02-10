@@ -17,4 +17,4 @@ addDecorator(s => <><GlobalStyle />{s()}</>);
 
 
 // automatically import all files ending in *.stories.js
-configure(requireContext('../src/stories', true, /\.stories\.tsx$/), module);
+configure(requireContext('../src', true, /\.stories\.tsx$/), module);

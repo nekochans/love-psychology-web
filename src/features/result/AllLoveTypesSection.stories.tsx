@@ -1,5 +1,5 @@
 import React from 'react';
-import AllLoveTypesSection from '../features/result/AllLoveTypesSection';
+import AllLoveTypesSection from './AllLoveTypesSection';
 
 export default {
   title: 'AllLoveTypesSection',

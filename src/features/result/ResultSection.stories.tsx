@@ -1,5 +1,5 @@
 import React from 'react';
-import ResultSection from '../features/result/ResultSection';
+import ResultSection from './ResultSection';
 
 export default {
   title: 'ResultSection',

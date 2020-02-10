@@ -1,5 +1,5 @@
 import React from 'react';
-import QuestionList from '../features/analysis/QuestionList';
+import QuestionList from './QuestionList';
 
 export default {
   title: 'QuestionList',

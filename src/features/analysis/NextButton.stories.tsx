@@ -1,5 +1,5 @@
 import React from 'react';
-import NextButton from '../features/analysis/NextButton';
+import NextButton from './NextButton';
 
 export default {
   title: 'NextButton',
