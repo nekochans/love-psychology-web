@@ -1,5 +1,5 @@
 import React from 'react';
-import HomePage from '../features/home/Home';
+import HomePage from './Home';
 
 export default {
   title: 'Home',

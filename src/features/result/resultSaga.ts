@@ -7,14 +7,14 @@ const sleep = (microSecond: number) =>
 
 function* postFetchResultRequest() {
   const questions = fetchResult();
-  yield call(sleep, 1000);
+  yield call(sleep, 500);
 
   yield put(result.actions.fetchResultSuccess(questions));
 }
 
 function* postFetchAllLoveTypesRequest() {
   const questions = fetchAllLoveTypes();
-  yield call(sleep, 1000);
+  yield call(sleep, 500);
 
   yield put(result.actions.fetchAllLoveTypesSuccess(questions));
 }

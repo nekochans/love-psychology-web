@@ -36,7 +36,12 @@ const analysis = createSlice({
   name: 'analysis',
   initialState,
   reducers: {
-    fetchQuestions: () => {},
+    fetchQuestions: (state: AnalysisState) => {
+      return {
+        ...state,
+        isLoading: true,
+      };
+    },
     fetchQuestionsSuccess: (
       state: AnalysisState,
       action: PayloadAction<Question[]>,
@@ -54,7 +59,12 @@ const analysis = createSlice({
         errorMessage: '',
       };
     },
-    fetchChoices: () => {},
+    fetchChoices: (state: AnalysisState) => {
+      return {
+        ...state,
+        isLoading: true,
+      };
+    },
     fetchChoicesSuccess: (
       state: AnalysisState,
       action: PayloadAction<Choice[]>,

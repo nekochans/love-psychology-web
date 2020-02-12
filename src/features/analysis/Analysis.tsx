@@ -7,6 +7,7 @@ import { RootState } from '../../app/rootReducer';
 import { theme } from '../../theme';
 import QuestionList, { InputEvent } from './QuestionList';
 import NextButton from './NextButton';
+import Loading from '../../components/Loading';
 
 type ChangeHandler = (e: InputEvent) => void;
 
@@ -14,6 +15,7 @@ const Analysis: FC<{}> = () => {
   const dispatch = useDispatch();
 
   const {
+    isLoading,
     questions,
     choices,
     perPage,
@@ -116,8 +118,10 @@ const Analysis: FC<{}> = () => {
       </NextButton>
     );
 
-  return (
-    <Section>
+  const section = isLoading ? (
+    <Loading />
+  ) : (
+    <Questions>
       <Description>
         恋人や片思いの人を思い浮かべながら回答しましょう。
       </Description>
@@ -131,17 +135,18 @@ const Analysis: FC<{}> = () => {
       />
       {nextButton}
       {currentPage > 1 && <BackButton onClick={onBackClicked}>戻る</BackButton>}
-    </Section>
+    </Questions>
   );
+
+  return <div>{section}</div>;
 };
 
-const Section = styled.div`
+const Questions = styled.div`
   align-items: center;
   background-color: ${theme.bg.default};
   color: ${theme.text.default};
   display: flex;
   flex-direction: column;
-  justify-content: center;
 `;
 
 const Description = styled.p`
